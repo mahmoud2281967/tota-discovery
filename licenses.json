@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-16T20:38:41.904Z",
+  "licenses": [
+    {
+      "userId": "TD-TEST-001",
+      "username": "td-test-58aa3181",
+      "status": "active",
+      "password": {
+        "algorithm": "PBKDF2-HMAC-SHA-256",
+        "iterations": 600000,
+        "salt": "fde369b67e0c759a7054759ee243baa0",
+        "hash": "6fb8b049ea0e8f58295aad688f94dfaeb65a1b490ead21a101cf1e19717b47c4"
+      },
+      "createdAt": "2026-10-16T20:38:41.904Z",
+      "updatedAt": "2026-10-16T20:38:41.904Z"
+    }
+  ]
+}
