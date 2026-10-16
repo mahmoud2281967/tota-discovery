@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T22:15:46.480Z",
+  "updatedAt": "2026-10-16T22:53:03.192Z",
   "licenses": [
     {
       "userId": "TD-TEST-001",
@@ -9,11 +9,11 @@
       "password": {
         "algorithm": "PBKDF2-HMAC-SHA-256",
         "iterations": 600000,
-        "salt": "084705aa183a01e7cd08128dbd66aa45",
-        "hash": "aec3abc6d2f1445eefca9d10216f5388f1c0ed79d573720a3647fd11dbd0933f"
+        "salt": "1ffb87c85305444806a09349b872d256",
+        "hash": "1b8d458b418aae7ac34b8cface680e92945a137cf3b9ed8cbcbdf5a71861077e"
       },
       "createdAt": "2026-10-16T20:38:41.904Z",
-      "updatedAt": "2026-10-16T22:15:46.200Z"
+      "updatedAt": "2026-10-16T22:53:03.031Z"
     }
   ]
 }
