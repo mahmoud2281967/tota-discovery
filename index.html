@@ -1124,9 +1124,13 @@ function getRequestedLevels(options) {
 
 function buildPrimaryQueries(input) {
   const queries = [];
-  const { nameVariants, phone, email, username, company, city } = input;
+  const { exactName, nameVariants, phone, email, username, company, city } = input;
   const name = nameVariants[0] || '';
 
+  if (exactName) {
+    queries.push(makeQuery('Primary', 'Exact Identity', 'identity', 110,
+      ['name'], quote(exactName)));
+  }
   if (phone) {
     const forms = phone.comparisonForms;
     for (const [form, priority] of [
@@ -1336,6 +1340,7 @@ function buildQueryPlan(subject, options = {}) {
   const warnings = [];
   const country = options.country || subject.country;
   const input = {
+    exactName: hasText(subject.name) ? subject.name : '',
     nameVariants: getNameVariants(subject.name),
     phone: null,
     email: null,
