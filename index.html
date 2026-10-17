@@ -3,66 +3,1982 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="أداة محلية لتنظيم البحث اليدوي في المصادر العامة">
-<title>دليل البحث العام | توتا شغل</title>
+<meta name="description" content="Tota Discovery V2 — تنظيم البحث اليدوي في المصادر العامة">
+<title>Tota Discovery V2</title>
 <style>
-:root{color-scheme:light;--ink:#172b3a;--muted:#647887;--line:#dce6eb;--bg:#f3f7f8;--card:#fff;--teal:#087e83;--teal2:#e7f5f3;--navy:#19394b;--orange:#d58a35;--red:#b94343;--shadow:0 8px 24px rgba(21,52,68,.07)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.65}.shell{max-width:1160px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:13px}.logo{width:46px;height:46px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:21px}.brand h1{font-size:21px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}.badge{border:1px solid #b9dcd8;background:var(--teal2);color:#07666a;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700}.notice{background:#fff8e9;border:1px solid #f0ddba;color:#6c512c;border-radius:12px;padding:11px 14px;margin-bottom:18px;font-size:13px}.layout{display:grid;grid-template-columns:minmax(300px,370px) 1fr;gap:18px;align-items:start}.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.form{padding:20px;position:sticky;top:12px}.panel h2{font-size:17px;margin:0 0 14px}.field{margin-bottom:12px}.field label{display:block;font-size:12px;font-weight:700;color:#435a69;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd8df;background:#fff;border-radius:9px;padding:10px 11px;font:inherit;font-size:14px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087e8318}.field input[dir=auto]{unicode-bidi:plaintext}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:6px 0 16px}.check{display:flex;align-items:center;gap:7px;padding:7px 8px;border:1px solid var(--line);border-radius:8px;font-size:12px}.check input{accent-color:var(--teal)}.actions{display:flex;flex-wrap:wrap;gap:8px}.btn{border:0;border-radius:9px;padding:10px 13px;font:inherit;font-weight:700;cursor:pointer}.primary{background:var(--teal);color:white;flex:1}.secondary{background:#edf2f4;color:var(--ink)}.quiet{background:transparent;border:1px solid var(--line);color:var(--muted)}.btn:hover{filter:brightness(.97)}.right{display:grid;gap:16px}.results{padding:19px}.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.results-head h2{margin:0}.small{font-size:12px;color:var(--muted)}.group{border-top:1px solid var(--line);padding:14px 0 2px}.group:first-of-type{border-top:0}.group h3{font-size:14px;margin:0 0 9px;display:flex;align-items:center;gap:8px}.count{background:#edf3f5;color:#526b79;border-radius:99px;padding:0 8px;font-size:11px}.link-card{border:1px solid var(--line);border-radius:11px;padding:11px 12px;margin-bottom:8px;background:#fff}.link-main{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.source{font-weight:700;font-size:13px}.query{font-size:12px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}.link-actions{display:flex;gap:7px;flex-shrink:0}.link-actions a,.link-actions button{font:inherit;font-size:11px;border:1px solid var(--line);border-radius:7px;padding:5px 8px;text-decoration:none;color:var(--teal);background:white;cursor:pointer}.saved{padding:19px}.saved-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.saved-item:first-child{border-top:0}.saved-title{font-weight:700;font-size:13px}.saved-meta{font-size:11px;color:var(--muted)}.saved-actions{display:flex;gap:6px}.saved-actions button{font:inherit;font-size:11px;border:1px solid var(--line);background:#fff;border-radius:7px;padding:5px 8px;cursor:pointer}.empty{padding:25px 12px;text-align:center;color:var(--muted);font-size:13px}.footer{text-align:center;color:#81919a;font-size:11px;padding:18px}.ltr{direction:ltr;unicode-bidi:isolate;text-align:left}.hidden{display:none!important}.toast{position:fixed;bottom:18px;left:18px;background:var(--navy);color:#fff;padding:10px 15px;border-radius:10px;box-shadow:var(--shadow);z-index:4;font-size:13px}
-@media(max-width:800px){.shell{padding:14px}.layout{grid-template-columns:1fr}.form{position:static}.top{align-items:flex-start}.badge{font-size:11px}.link-main{display:block}.link-actions{margin-top:8px}.grid2{gap:8px}}
-@media print{body{background:white;color:#111;font-size:11pt}.shell{max-width:none;padding:0}.top{margin-bottom:12px}.badge,.form,.saved,.link-actions,.footer,.notice .screen-only{display:none!important}.layout,.right{display:block}.panel{border:0;box-shadow:none;border-radius:0;padding:0;margin:0 0 12px}.results{padding:0}.group{break-inside:avoid;padding:8px 0}.link-card{break-inside:avoid;border:1px solid #bbb;padding:7px;margin-bottom:5px}.query{color:#333}.print-meta{display:block!important}.print-link:after{content:' (' attr(href) ')';direction:ltr;unicode-bidi:isolate;font-size:9pt;color:#333;overflow-wrap:anywhere}.brand h1{font-size:18pt}.notice{background:white;border:1px solid #aaa;color:#222}}
+:root{color-scheme:light;--ink:#14283e;--muted:#66788a;--line:#e4ddd0;--paper:#fbf8f1;--ivory:#f4efe4;--card:#fffdf9;--beige:#e9ddc8;--blue:#4678a8;--blue-pale:#e7eff7;--navy:#152d49;--navy2:#203d5d;--gold:#ba9259;--green:#28735d;--red:#a54742;--shadow:0 12px 34px rgba(31,51,72,.08)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.6}button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden,[hidden]{display:none!important}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.shell{max-width:1440px;margin:auto;padding:22px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,var(--navy2),var(--navy));color:white;display:grid;place-items:center;font-weight:900;font-size:20px;box-shadow:0 8px 18px #152d4928}.brand h1{font-size:20px;margin:0}.brand p{margin:2px 0;color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:9px}.license-badge,.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 11px;color:var(--muted);font-size:11px;font-weight:700}.notice{background:#fff8e8;border:1px solid #ead8b7;color:#6d542c;border-radius:12px;padding:10px 14px;margin:0 0 16px;font-size:12px}.login-wrap{max-width:520px;margin:9vh auto}.login-card,.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.login-card{padding:26px}.login-card h2{margin:0 0 4px}.login-card>p{margin:0 0 18px;color:var(--muted);font-size:13px}.field{margin:0 0 13px}.field label{display:block;font-size:12px;font-weight:700;color:#45596e;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #d7d0c4;border-radius:10px;background:#fff;padding:10px 11px;color:var(--ink);outline:none}.field textarea{min-height:78px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #4678a81a}.login-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{border:1px solid transparent;border-radius:10px;padding:9px 13px;font-weight:700;font-size:12px;transition:.15s}.btn:hover{transform:translateY(-1px)}.primary{background:var(--navy);color:white}.secondary{background:var(--blue-pale);color:#244b70;border-color:#d2e0ec}.quiet{background:transparent;border-color:var(--line);color:var(--ink)}.danger{background:#fbefed;color:var(--red);border-color:#ecd2ce}.small{font-size:11px;color:var(--muted)}.error{color:var(--red);font-size:12px;min-height:20px;margin-top:10px}.app-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:17px 0 14px}.app-header h2{margin:0;font-size:18px}.app-header p{margin:2px 0;color:var(--muted);font-size:12px}.nav{display:flex;gap:7px;overflow:auto;padding:4px 1px 12px;margin-bottom:15px;scrollbar-width:thin}.nav button{white-space:nowrap;background:#fffdf9;border:1px solid var(--line);border-radius:11px;padding:9px 13px;color:#536579;font-weight:700;font-size:12px}.nav button.active{background:var(--navy);border-color:var(--navy);color:white;box-shadow:0 5px 12px #152d4923}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;align-items:start}.col12{grid-column:span 12}.col8{grid-column:span 8}.col7{grid-column:span 7}.col6{grid-column:span 6}.col5{grid-column:span 5}.col4{grid-column:span 4}.panel{padding:17px}.panel h3{font-size:15px;margin:0 0 12px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.section-head h3{margin:0}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metric{border:1px solid var(--line);background:linear-gradient(135deg,#fffdf9,#f5f0e6);border-radius:13px;padding:12px}.metric span{display:block;font-size:11px;color:var(--muted)}.metric strong{display:block;font-size:22px;color:var(--navy);direction:ltr;unicode-bidi:isolate}.metric em{font-style:normal;font-size:10px;color:var(--muted)}.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.check-grid{display:flex;gap:8px;flex-wrap:wrap}.check{display:flex;gap:7px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;font-size:11px}.checks{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 13px}.case-list,.candidate-list,.query-list,.evidence-list{display:grid;gap:9px}.case-item,.candidate-card,.query-card,.evidence-card{border:1px solid var(--line);border-radius:13px;background:#fff;padding:12px}.case-item{display:flex;align-items:center;justify-content:space-between;gap:10px}.case-item button{border:0;background:transparent;color:var(--blue);font-weight:700}.tag{display:inline-flex;align-items:center;border-radius:999px;background:var(--blue-pale);color:#355f84;padding:3px 8px;font-size:10px;font-weight:700}.tag.good{background:#e7f3ed;color:var(--green)}.tag.warn{background:#fbf0dc;color:#88652f}.tag.bad{background:#f9e9e7;color:var(--red)}.query-top,.candidate-top,.evidence-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.query-text{font-size:13px;font-weight:700;margin:5px 0;overflow-wrap:anywhere;direction:auto;unicode-bidi:plaintext}.url{direction:ltr;text-align:left;unicode-bidi:plaintext;font-size:10px;color:var(--muted);overflow-wrap:anywhere}.query-actions,.card-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.query-actions a{display:inline-block;text-decoration:none;border-radius:8px;background:var(--navy);color:white;padding:7px 10px;font-size:11px;font-weight:700}.query-actions button,.card-actions button{border:1px solid var(--line);background:white;border-radius:8px;padding:6px 9px;font-size:11px}.query-card textarea{width:100%;min-height:42px;margin-top:8px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:11px}.divider{height:1px;background:var(--line);margin:14px 0}.empty{border:1px dashed #d5cbb8;border-radius:12px;padding:20px;text-align:center;color:var(--muted);font-size:12px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}.notice-inline{padding:8px 10px;background:#f4efe4;border-radius:9px;color:#5e6470;font-size:11px}.status-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.coverage-table{width:100%;border-collapse:collapse;font-size:11px}.coverage-table th,.coverage-table td{border-bottom:1px solid var(--line);padding:8px;text-align:right}.coverage-table th{color:var(--muted);font-weight:700}.toast{position:fixed;bottom:20px;left:20px;z-index:30;background:var(--navy);color:white;border-radius:11px;padding:10px 14px;box-shadow:var(--shadow);font-size:12px}.footer{margin:18px 0 5px;color:var(--muted);font-size:10px;text-align:center}.tab-content[hidden]{display:none!important}.danger-zone{border:1px solid #ecd2ce;background:#fff9f8;border-radius:12px;padding:12px}.ltr{direction:ltr;text-align:left;unicode-bidi:plaintext}.wide-scroll{overflow:auto}.print-only{display:none}
+@media(max-width:900px){.shell{padding:14px}.col8,.col7,.col6,.col5,.col4{grid-column:span 12}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.app-header{align-items:flex-start}.topbar{align-items:flex-start}.login-wrap{margin:4vh auto}.panel{padding:14px}}
+@media(max-width:560px){.topbar{flex-wrap:wrap}.top-actions{width:100%;justify-content:flex-start}.brand h1{font-size:17px}.login-grid,.two-col{grid-template-columns:1fr}.metrics{gap:7px}.metric{padding:9px}.metric strong{font-size:19px}.app-header{display:block}.app-header .row{margin-top:8px}.nav{flex-wrap:wrap;overflow:visible;gap:6px}.nav button{padding:8px 11px;white-space:normal;flex:1 1 auto;text-align:center}.panel{border-radius:14px}.query-top,.candidate-top,.evidence-top{display:block}.query-top>*+*{margin-top:6px}}
+@media print{body{background:#fff}.shell{max-width:none;padding:0}.topbar,.notice,.nav,.login-wrap,.top-actions,.app-header .row,.no-print,.footer{display:none!important}.panel{box-shadow:none;border:0;padding:6px}.tab-content[hidden]{display:block!important}.query-actions,.card-actions{display:none!important}.print-only{display:block}.grid{display:block}.metric{display:inline-block;margin:4px;min-width:110px}}
+#tab-about .small{font-size:14px;line-height:1.8;color:var(--ink)}#tab-about .quick .btn{font-size:13px;padding:9px 11px}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="top"><div class="brand"><div class="logo">ب</div><div><h1>دليل البحث العام</h1><p>نظّم بحثك في المصادر العامة — مصر، السعودية، قطر</p></div></div><span class="badge">نسخة تجريبية مجانية · ملف واحد</span></header>
-<div class="notice">هذه الأداة تُنشئ روابط بحث فقط ولا تجمع النتائج تلقائيًا. افتح المصادر بنفسك، ودوّن النتائج التي تريد حفظها. استخدم البيانات العامة أو المصرح لك بالبحث عنها.</div>
-<div class="layout">
-<section class="panel form" aria-label="بيانات البحث"><h2>بيانات البحث</h2>
-<div class="field"><label for="name">الاسم الأساسي — بأي لغة</label><input id="name" dir="auto" autocomplete="off" placeholder="مثال: أحمد محمد / Ahmed Mohamed"></div>
-<div class="field"><label for="alias">اسم بديل أو تهجئة أخرى (اختياري)</label><input id="alias" dir="auto" autocomplete="off" placeholder="اكتب التهجئة بنفسك إن وجدت"></div>
-<div class="grid2"><div class="field"><label for="email">الإيميل</label><input id="email" class="ltr" dir="ltr" type="email" autocomplete="off" placeholder="name@example.com"></div><div class="field"><label for="phone">رقم الهاتف</label><input id="phone" dir="auto" inputmode="tel" autocomplete="off" placeholder="الرقم مع مفتاح الدولة إن أمكن"></div></div>
-<div class="grid2"><div class="field"><label for="company">الشركة</label><input id="company" dir="auto" placeholder="اسم الشركة"></div><div class="field"><label for="city">المدينة</label><input id="city" dir="auto" placeholder="المدينة"></div></div>
-<div class="field"><label for="country">الدولة المستهدفة</label><select id="country"><option value="eg">مصر</option><option value="sa">السعودية</option><option value="qa">قطر</option><option value="all">الدول الثلاث</option></select></div>
-<div class="field"><label>مجالات البحث</label><div class="checks"><label class="check"><input type="checkbox" name="cat" value="social" checked> السوشيال والملفات العامة</label><label class="check"><input type="checkbox" name="cat" value="jobs" checked> التوظيف والمهني</label><label class="check"><input type="checkbox" name="cat" value="companies" checked> الشركات والأدلة</label><label class="check"><input type="checkbox" name="cat" value="web" checked> بحث ويب عام</label></div></div>
-<div class="actions"><button class="btn primary" id="generate">إنشاء / تحديث روابط البحث</button><button class="btn secondary" id="save">حفظ كبحث جديد</button></div><div class="actions" style="margin-top:8px"><button class="btn secondary hidden" id="updateSaved">تحديث السجل المحفوظ</button></div>
-<div class="actions" style="margin-top:8px"><button class="btn quiet" id="export">تصدير Excel</button><button class="btn quiet" id="print">طباعة</button><button class="btn quiet" id="reset">مسح الحقول</button></div><div class="actions" style="margin-top:8px"><button class="btn quiet" id="exportBackupV1" type="button">تصدير نسخة احتياطية V1</button></div>
-</section>
-<div class="right">
-<section class="panel results"><div class="results-head"><h2>روابط البحث المقترحة</h2><span id="resultCount" class="small">أدخل معيارًا واحدًا على الأقل ثم أنشئ الروابط</span></div><div id="printMeta" class="small print-meta hidden"></div><div id="results"><div class="empty">ستظهر هنا روابط البحث حسب البيانات والدولة والمجالات التي اخترتها.</div></div></section>
-<section class="panel saved"><div class="results-head"><h2>عمليات البحث المحفوظة</h2><span class="small">محفوظة على هذا المتصفح والجهاز</span></div><div id="savedList" class="empty">لا توجد عمليات محفوظة بعد.</div></section>
+<header class="topbar"><div class="brand"><div class="logo" aria-hidden="true">TD</div><div><h1>Tota Discovery V2</h1><p>منظّم اكتشاف عام — نسخة اختبار محلية</p></div></div><div class="top-actions"><span class="license-badge">نسخة تجريبية · ترخيص تجريبي</span><span id="userBadge" class="pill hidden" dir="auto"></span><button id="logoutBtn" class="btn quiet hidden" type="button">تسجيل الخروج</button></div></header>
+<div class="notice">تُنشئ الأداة روابط بحث يدويًا فقط؛ لا تجمع النتائج تلقائيًا ولا تتجاوز صفحات التحقق. استخدم مصادر عامة وبيانات مصرحًا بها. بيانات البحث محفوظة محليًا في هذا المتصفح فقط.</div>
+<section id="loginView" class="login-wrap" aria-label="تسجيل الدخول"><div class="login-card"><h2>دخول المستخدم المرخّص</h2><p>أدخل بيانات الترخيص للتحقق من حالة الحساب وكلمة المرور.</p><div class="login-grid"><div class="field"><label for="loginUserId">معرّف المستخدم</label><input id="loginUserId" dir="ltr" autocomplete="username" placeholder="أدخل معرّف المستخدم"></div><div class="field"><label for="loginUsername">اسم المستخدم</label><input id="loginUsername" dir="ltr" autocomplete="username"></div></div><div class="field"><label for="loginPassword">كلمة المرور</label><input id="loginPassword" dir="ltr" type="password" autocomplete="current-password"></div><button id="loginBtn" class="btn primary" type="button">تحقق وتسجيل الدخول</button><div id="loginError" class="error" role="alert"></div><p class="small">مصدر الترخيص: خدمة نشر ملف التراخيص</p></div></section>
+<main id="appView" class="hidden">
+<div class="app-header"><div><h2 id="activeTitle">لوحة الملخص</h2><p id="activeSubtitle">ابدأ بحثًا جديدًا أو تابع بحثًا محفوظًا.</p></div><div class="row"><button id="newCaseBtn" class="btn primary" type="button">＋ بحث جديد</button><button id="saveCaseBtn" class="btn secondary" type="button">حفظ البحث</button></div></div>
+<nav class="nav" aria-label="أقسام التطبيق"><button class="active" data-tab="dashboard">الملخص</button><button data-tab="case">بيانات البحث</button><button data-tab="search">خطة البحث</button><button data-tab="candidates">النتائج المحتملة</button><button data-tab="evidence">الأدلة</button><button data-tab="coverage">تغطية البحث</button><button data-tab="data">الحفظ والتصدير</button><button data-tab="about">المساعدة</button></nav>
+<section id="tab-dashboard" class="tab-content"><div class="grid"><article class="panel col12"><div class="section-head"><h3>ملخص العمل الحالي</h3><span id="caseStatus" class="tag">لا يوجد بحث حالي</span></div><div class="metrics"><div class="metric"><span>عمليات البحث المحفوظة</span><strong id="metricCases">0</strong><em>على هذا المتصفح</em></div><div class="metric"><span>استعلامات البحث</span><strong id="metricQueries">0</strong><em>حسب مستويات البحث</em></div><div class="metric"><span>النتائج المحتملة</span><strong id="metricCandidates">0</strong><em>بدون تكرار للمعرّفات</em></div><div class="metric"><span>الأدلة</span><strong id="metricEvidence">0</strong><em>مرتبطة بالنتائج المحتملة</em></div></div><div class="quick"><button class="btn secondary" data-go="case">بيانات البحث</button><button class="btn secondary" data-go="search">إنشاء خطة البحث</button><button class="btn secondary" data-go="candidates">إضافة نتيجة محتملة</button><button class="btn quiet" data-go="coverage">عرض تغطية البحث</button></div><div class="notice-inline" style="margin-top:14px"><strong>كيف أبدأ؟</strong><p class="small">اضغط بحث جديد، وأدخل ما تعرفه، ثم اختر مستوى البحث والمحركات.</p><button class="btn secondary" type="button" data-go="about">عرض دليل الاستخدام</button></div></article><article class="panel col7"><div class="section-head"><h3>عمليات البحث</h3><span class="small">يمكن فتحها وتعديلها</span></div><div id="caseList" class="case-list"></div></article><article class="panel col5"><h3>ملاحظات الاستخدام</h3><div class="notice-inline">البحث لا يؤكد الهوية؛ قيّم كل نتيجة مع أدلتها. ظهور نتيجة محتملة بمحركات متعددة يُسجّل كمصدر اكتشاف فقط.</div><div class="divider"></div><div class="small">التخزين محلي. استخدم نسخة احتياطية للاحتفاظ بنسخة واستعادة البيانات على جهاز آخر.</div></article></div></section>
+<section id="tab-case" class="tab-content" hidden><div class="grid"><article class="panel col7"><div class="section-head"><h3>بيانات البحث / الشخص محل البحث</h3><span class="small">اكتب البيانات كما هي دون تخمين</span></div><div class="two-col"><div class="field"><label for="subjectName">الاسم</label><input id="subjectName" dir="auto"></div><div class="field"><label for="subjectAlias">اسم بديل (اختياري)</label><input id="subjectAlias" dir="auto"></div><div class="field"><label for="subjectPhone">الهاتف</label><input id="subjectPhone" dir="auto" inputmode="tel"></div><div class="field"><label for="subjectCountry">الدولة</label><select id="subjectCountry"><option value="EG">مصر</option><option value="SA">السعودية</option><option value="QA">قطر</option></select></div><div class="field"><label for="subjectEmail">البريد الإلكتروني</label><input id="subjectEmail" class="ltr" type="email"></div><div class="field"><label for="subjectUsername">اسم المستخدم</label><input id="subjectUsername" class="ltr"></div><div class="field"><label for="subjectCompany">الشركة</label><input id="subjectCompany" dir="auto"></div><div class="field"><label for="subjectCity">المدينة</label><input id="subjectCity" dir="auto"></div></div><div class="field"><label for="caseNotes">ملاحظات البحث</label><textarea id="caseNotes" dir="auto"></textarea></div><div class="row"><button id="applySubjectBtn" class="btn primary" type="button">تحديث بيانات البحث</button><span class="small">أي تعديل يعلّم خطة البحث بأنها قديمة حتى تعيد إنشائها.</span></div><div id="staleNotice" class="error"></div></article><article class="panel col5"><div class="section-head"><h3>اختيار مستويات البحث</h3><span class="small">أساسي دائمًا</span></div><div class="checks"><label class="check"><input type="checkbox" id="levelPrimary" checked disabled> أساسي</label><label class="check"><input type="checkbox" id="levelExpanded"> موسع</label><label class="check"><input type="checkbox" id="levelDeep"> متعمق</label></div><div class="divider"></div><h3>محركات البحث</h3><div class="checks"><label class="check"><input type="checkbox" name="engine" value="Google" checked> Google</label><label class="check"><input type="checkbox" name="engine" value="Bing" checked> Bing</label><label class="check"><input type="checkbox" name="engine" value="DuckDuckGo" checked> DuckDuckGo</label><label class="check"><input type="checkbox" name="engine" value="Brave" checked> Brave</label></div><button id="applySearchOptionsBtn" class="btn secondary" type="button">حفظ خيارات البحث</button><p class="small">حدود خطة البحث: 15 أساسيًا، و20 موسعًا، و25 متعمقًا لكل مستوى. يفتح الرابط يدويًا في صفحة جديدة.</p></article></div></section>
+<section id="tab-search" class="tab-content" hidden><article class="panel"><div class="section-head"><div><h3>خطة البحث</h3><span id="searchCount" class="small">أنشئ الاستعلامات من بيانات البحث</span></div><div class="row"><button id="generateSearchBtn" class="btn primary" type="button">إنشاء / تحديث الاستعلامات</button><button id="printBtn" class="btn quiet" type="button">طباعة العرض</button></div></div><div id="searchStale" class="notice-inline hidden">البيانات تغيرت. أعد إنشاء الاستعلامات قبل الحفظ أو التصدير.</div><div id="queryList" class="query-list"><div class="empty">لا توجد استعلامات بعد.</div></div></article></section>
+<section id="tab-candidates" class="tab-content" hidden><div class="grid"><article class="panel col4"><h3>إضافة نتيجة محتملة يدويًا</h3><div class="field"><label for="candidateName">الاسم</label><input id="candidateName" dir="auto"></div><div class="field"><label for="candidatePhone">الهاتف</label><input id="candidatePhone" dir="auto"></div><div class="field"><label for="candidateEmail">البريد الإلكتروني</label><input id="candidateEmail" class="ltr"></div><div class="field"><label for="candidateUsername">اسم المستخدم</label><input id="candidateUsername" class="ltr"></div><div class="two-col"><div class="field"><label for="candidateCompany">الشركة</label><input id="candidateCompany" dir="auto"></div><div class="field"><label for="candidateCity">المدينة</label><input id="candidateCity" dir="auto"></div></div><div class="field"><label for="candidateCountry">الدولة</label><select id="candidateCountry"><option value="EG">مصر</option><option value="SA">السعودية</option><option value="QA">قطر</option></select></div><div class="field"><label for="candidateFoundVia">ظهر عبر محرك بحث (اختياري)</label><select id="candidateFoundVia"><option value="">غير معروف</option><option>Google</option><option>Bing</option><option>DuckDuckGo</option><option>Brave</option></select></div><button id="addCandidateBtn" class="btn primary" type="button">إضافة ومطابقة</button><div id="candidateError" class="error"></div></article><article class="panel col8"><div class="section-head"><h3>النتائج المحتملة ومطابقة الهوية</h3><span id="candidateCount" class="small">0</span></div><div id="candidateList" class="candidate-list"><div class="empty">لا توجد نتائج محتملة في البحث.</div></div></article></div></section>
+<section id="tab-evidence" class="tab-content" hidden><div class="grid"><article class="panel col4"><h3>إضافة دليل</h3><div class="field"><label for="evidenceCandidate">نتيجة محتملة</label><select id="evidenceCandidate"></select></div><div class="field"><label for="evidenceSource">المصدر</label><input id="evidenceSource" dir="auto" placeholder="اسم الموقع أو الجهة"></div><div class="field"><label for="evidenceUrl">الرابط الأصلي</label><input id="evidenceUrl" class="ltr" type="url" placeholder="https://"></div><div class="field"><label for="evidenceStatus">الحالة</label><select id="evidenceStatus"><option value="Needs Review">يحتاج مراجعة</option><option value="Probable">مرجح</option><option value="Confirmed">مؤكد</option><option value="Rejected">مرفوض</option></select></div><div class="field"><label for="evidenceEngine">محرك البحث ومصدر الظهور</label><select id="evidenceEngine"><option value="">غير معروف</option><option>Google</option><option>Bing</option><option>DuckDuckGo</option><option>Brave</option></select></div><div class="field"><label for="evidenceNotes">ملاحظات</label><textarea id="evidenceNotes" dir="auto"></textarea></div><button id="addEvidenceBtn" class="btn primary" type="button">حفظ الدليل</button><div id="evidenceError" class="error"></div></article><article class="panel col8"><div class="section-head"><h3>سجلات الأدلة</h3><span class="small">الرابط الأصلي محفوظ؛ التطبيع للمقارنة فقط</span></div><div id="evidenceList" class="evidence-list"><div class="empty">لا توجد أدلة.</div></div></article></div></section>
+<section id="tab-coverage" class="tab-content" hidden><article class="panel"><div class="section-head"><h3>تغطية البحث</h3><button id="refreshCoverageBtn" class="btn secondary" type="button">تحديث المقاييس</button></div><div id="coverageMetrics" class="metrics"></div><div class="divider"></div><div class="wide-scroll"><table class="coverage-table"><thead><tr><th>المستوى</th><th>مُنشأة</th><th>تمت مراجعتها</th><th>قيد المراجعة</th></tr></thead><tbody id="coverageLevels"></tbody></table></div><div class="divider"></div><h3>الاستعلامات لكل محرك</h3><div id="coverageEngines" class="check-grid"></div><div class="divider"></div><h3>توزيع المطابقة / النتائج المحتملة</h3><div id="coverageMatches" class="check-grid"></div></article></section>
+<section id="tab-data" class="tab-content" hidden><div class="grid"><article class="panel col6"><h3>الحفظ والتصدير</h3><p class="small">تُحفظ بيانات البحث محليًا. التنزيل يحفظ بيانات البحث كاملة، والنسخة الاحتياطية تشمل كل عمليات البحث.</p><div class="row"><button id="exportCaseBtn" class="btn primary" type="button">تنزيل بيانات البحث الحالية</button><button id="backupBtn" class="btn secondary" type="button">إنشاء نسخة احتياطية لكل عمليات البحث</button></div><div class="divider"></div><div class="field"><label>استعادة نسخة احتياطية</label><div class="row"><button id="chooseRestoreFileBtn" class="btn quiet" type="button">اختيار ملف</button><span id="restoreFileName" class="small">لم يتم اختيار ملف</span><input id="restoreFile" class="visually-hidden" type="file" accept="application/json,.json" aria-label="ملف النسخة الاحتياطية" tabindex="-1"></div></div><div class="row"><button id="restoreBtn" class="btn secondary" type="button">التحقق والاستعادة</button></div><div id="dataMessage" class="error"></div></article><article class="panel col6"><h3>إدارة البحث الحالي</h3><div class="row"><button id="deleteCaseBtn" class="btn danger" type="button">حذف البحث الحالي</button><button id="printDataBtn" class="btn quiet" type="button">طباعة</button></div><div class="divider"></div><div class="danger-zone small">تحذير: الاستعادة فوق بيانات موجودة تستبدل بيانات التطبيق بالكامل بعد تأكيد صريح. احتفظ بنسخة قبل الاستبدال.</div></article></div></section>
+<section id="tab-about" class="tab-content" hidden><div class="grid"><article class="panel col12" id="guide-start"><h3>ابدأ من هنا</h3><p class="small">ابدأ ببحث جديد، ثم أدخل المعلومات المتوفرة لديك. اترك الحقول التي لا تعرفها فارغة، ولا تخمّن البيانات.</p><nav class="quick" aria-label="أقسام دليل الاستخدام"><a class="btn quiet" href="#guide-start">ابدأ من هنا</a><a class="btn quiet" href="#guide-steps">طريقة استخدام التطبيق</a><a class="btn quiet" href="#guide-levels">معنى مستويات البحث</a><a class="btn quiet" href="#guide-candidates">كيفية التعامل مع النتائج المحتملة</a><a class="btn quiet" href="#guide-evidence">كيفية إضافة الأدلة</a><a class="btn quiet" href="#guide-coverage">كيفية معرفة ما تم فحصه وما تبقى</a><a class="btn quiet" href="#guide-backup">الحفظ والتصدير والنسخ الاحتياطي</a><a class="btn quiet" href="#guide-limits">ملاحظات وحدود التطبيق</a></nav></article><article class="panel col12" id="guide-steps"><h3>طريقة استخدام التطبيق</h3><ol class="small"><li>اضغط بحث جديد.</li><li>أدخل ما تعرفه عن الشخص.</li><li>اختر مستوى البحث والمحركات: <span dir="ltr">Google</span> و<span dir="ltr">Bing</span> و<span dir="ltr">DuckDuckGo</span> و<span dir="ltr">Brave</span>.</li><li>أنشئ خطة البحث.</li><li>افتح روابط البحث وراجع النتائج.</li><li>أضف النتائج المحتملة.</li><li>أضف الأدلة المهمة.</li><li>راجع تغطية البحث.</li><li>احفظ أو صدّر العمل.</li></ol></article><article class="panel col12" id="guide-levels"><h3>معنى مستويات البحث</h3><ul class="small"><li><strong>أساسي:</strong> يبدأ بالبيانات المباشرة التي أدخلتها.</li><li><strong>موسع:</strong> يضيف صيغًا وعبارات بحث أوسع.</li><li><strong>متعمق:</strong> يوسّع البحث أكثر باستخدام البيانات المتاحة.</li></ul><p class="small">كلما اتسع المستوى زادت روابط البحث؛ راجعها يدويًا واختر ما يناسبك.</p></article><article class="panel col12" id="guide-candidates"><h3>كيفية التعامل مع النتائج المحتملة</h3><p class="small">أضف الشخص عندما تجد صفحة أو سجلًا قد يطابق البيانات. قارن الاسم ووسائل الاتصال والمعلومات الأخرى، ثم اختر الحالة المناسبة. درجة المطابقة تساعد على ترتيب المراجعة ولا تثبت الهوية: قوي، مرجح، ضعيف، أو غير مرجح. استخدم مؤكد عند توافر أدلة كافية، يحتاج مراجعة عند الشك، ومرفوض عند عدم التطابق.</p></article><article class="panel col12" id="guide-evidence"><h3>كيفية إضافة الأدلة</h3><p class="small">اربط الدليل بالنتيجة المحتملة، وأدخل عنوان المصدر ورابط الصفحة وملاحظة قصيرة توضّح ما الذي يدعمه. احتفظ بالمصدر كما ظهر، ولا تضف معلومات غير متاحة فيه.</p></article><article class="panel col12" id="guide-coverage"><h3>كيفية معرفة ما تم فحصه وما تبقى</h3><p class="small">افتح تغطية البحث لمراجعة الروابط التي أنشأتها، وما فتحته أو راجعته، وما لا يزال متبقيًا. حدّث التغطية بعد كل جولة حتى تميّز بين ما فُحص وما لم يُفحص.</p></article><article class="panel col12" id="guide-backup"><h3>الحفظ والتصدير والنسخ الاحتياطي</h3><p class="small">استخدم حفظ البحث للاحتفاظ بالعمل الحالي، وافتح عمليات البحث المحفوظة للعودة إليه. استخدم التصدير لإخراج البحث الحالي، والنسخ الاحتياطي لحفظ بيانات التطبيق واستعادتها لاحقًا. التخزين محلي في المتصفح؛ احتفظ بنسخة احتياطية في مكان آمن.</p></article><article class="panel col12" id="guide-limits"><h3>ملاحظات وحدود التطبيق</h3><ul class="small"><li>التطبيق ينشئ روابط للبحث؛ مراجعة الصفحات والنتائج يدوية.</li><li>لا يتجاوز اختبارات التحقق أو قيود المواقع؛ إذا ظهرت، توقف وأعد المحاولة لاحقًا.</li><li>نتيجة البحث ودرجة المطابقة لا تؤكدان هوية الشخص وحدهما.</li><li>استخدم المعلومات المتاحة للعامة وبما يتوافق مع القوانين وشروط المواقع.</li></ul></article></div></section>
+</main>
+<div id="toast" class="toast hidden" role="status"></div><div class="footer">Tota Discovery V2 · ملف واحد · بيانات محلية · نسخة تجريبية</div>
 </div>
-</div><div class="footer">ملف مستقل دون مكتبات خارجية أو مفاتيح API. مشاركة رابط عام تتطلب لاحقًا رفع هذا الملف إلى استضافة ثابتة.</div></div>
-<div id="toast" class="toast hidden" role="status"></div>
 <script>
-(()=>{'use strict';
-const $=id=>document.getElementById(id), fields=['name','alias','email','phone','company','city','country'];
-const countryNames={eg:'مصر',sa:'السعودية',qa:'قطر',all:'مصر، السعودية، قطر'};
-const sourceGroups={social:[['LinkedIn','linkedin.com'],['Facebook','facebook.com'],['Instagram','instagram.com'],['X','x.com'],['TikTok','tiktok.com'],['YouTube','youtube.com'],['Threads','threads.net'],['Snapchat','snapchat.com'],['Reddit','reddit.com'],['Pinterest','pinterest.com'],['Telegram','t.me'],['Quora','quora.com'],['Medium','medium.com'],['GitHub','github.com'],['Behance','behance.net']],jobs:[['Bayt','bayt.com'],['Wuzzuf','wuzzuf.net'],['Naukrigulf','naukrigulf.com'],['GulfTalent','gulftalent.com'],['Indeed','indeed.com'],['LinkedIn Jobs','linkedin.com/jobs'],['Glassdoor','glassdoor.com'],['Naukri','naukri.com']],companies:[['دليل شركات — بحث عام',''],['غرفة/دليل أعمال — بحث عام',''],['صفحات الشركات على LinkedIn','linkedin.com/company']]};
-let current=[],lastSavedId=null,formDirty=false;
-function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function toast(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hidden'),2600)}
-function inputs(){const o={};for(const id of fields)o[id]=$(id).value.trim();o.categories=[...document.querySelectorAll('input[name="cat"]:checked')].map(x=>x.value);return o}
-function terms(d){return [d.name,d.alias,d.email,d.phone,d.company,d.city].filter(Boolean)}
-function quote(t){return /\s/.test(t)?'"'+t.replaceAll('"','')+'"':t}
-function countrySuffix(d){const region={eg:'Egypt OR مصر',sa:'Saudi Arabia OR السعودية',qa:'Qatar OR قطر',all:'Egypt OR مصر OR Saudi Arabia OR السعودية OR Qatar OR قطر'}[d.country];return region?' ('+region+')':''}
-function build(){const d=inputs(), ts=terms(d),previous=current;if(!ts.length){toast('أدخل الاسم أو الإيميل أو الهاتف أو الشركة أولًا.');return}const out=[],suffix=countrySuffix(d);const add=(cat,label,domain,q)=>{const query=(domain?'site:'+domain+' ':'')+q+suffix;const url='https://www.google.com/search?q='+encodeURIComponent(query);const old=previous.find(x=>x.url===url);out.push({cat,label,domain,query,url,selected:old?old.selected:true,status:old?.status||'جديدة',note:old?.note||''})};
-const identity=[d.name,d.alias,d.email,d.phone].filter(Boolean).map(quote).join(' '), context=[d.company,d.city].filter(Boolean).map(quote).join(' ');const main=[identity,context].filter(Boolean).join(' ');
-for(const c of d.categories){if(c==='social'){for(const [label,domain] of sourceGroups.social)add(c,label,domain,main||ts.map(quote).join(' '))}else if(c==='jobs'){for(const [label,domain] of sourceGroups.jobs)add(c,label,domain,[main,'(jobs OR career)'].filter(Boolean).join(' '))}else if(c==='companies'){const org=d.company||d.name||d.alias;if(org){add(c,'دليل شركات — بحث عام','',quote(org)+' companies directory');add(c,'غرفة/دليل أعمال — بحث عام','',quote(org)+' chamber of commerce business directory');add(c,'صفحات الشركات على LinkedIn','linkedin.com/company',quote(org))}}else if(c==='web'){for(const term of ts)add(c,'بحث ويب عام','',quote(term))}}
-current=out;formDirty=false;$('updateSaved').disabled=false;render(d);toast('تم إنشاء '+out.length+' رابط بحث.');}
-function render(d=inputs()){const box=$('results');if(!current.length){box.innerHTML='<div class="empty">لا توجد روابط بعد.</div>';return}const labels={social:'السوشيال والملفات العامة',jobs:'التوظيف والمهني',companies:'الشركات والأدلة',web:'بحث ويب عام'};box.innerHTML=Object.entries(labels).map(([key,title])=>{const list=current.filter(x=>x.cat===key);if(!list.length)return'';return `<div class="group"><h3>${title}<span class="count">${list.length}</span></h3>${list.map(x=>`<article class="link-card"><div class="link-main"><div><label class="check"><input type="checkbox" data-select="${current.indexOf(x)}" ${x.selected!==false?'checked':''}> تضمين عند الحفظ</label><div class="source">${esc(x.label)}</div><div class="query" dir="auto">استعلام البحث: ${esc(x.query)}</div></div><div class="link-actions"><a class="print-link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">فتح البحث</a><button type="button" data-copy="${current.indexOf(x)}">نسخ الاستعلام</button></div></div><div class="grid2" style="margin-top:9px"><select data-status="${current.indexOf(x)}" aria-label="حالة النتيجة"><option ${x.status==='جديدة'?'selected':''}>جديدة</option><option ${x.status==='تمت مراجعتها'?'selected':''}>تمت مراجعتها</option><option ${x.status==='مرتبطة'?'selected':''}>مرتبطة</option><option ${x.status==='غير مرتبطة'?'selected':''}>غير مرتبطة</option></select><input data-note="${current.indexOf(x)}" dir="auto" placeholder="ملاحظتك أو النتيجة التي وجدتها" value="${esc(x.note||'')}"></div></article>`).join('')}</div>`}).join('');$('resultCount').textContent=`${current.length} رابط · الدولة: ${countryNames[d.country]}`;$('printMeta').textContent='بيانات البحث: '+terms(d).join(' | ')+' — الدولة: '+countryNames[d.country];$('printMeta').classList.remove('hidden');}
-$('results').addEventListener('input',e=>{const idx=Number(e.target.dataset.note);if(Number.isInteger(idx)&&current[idx])current[idx].note=e.target.value});$('results').addEventListener('change',e=>{const idx=Number(e.target.dataset.select??e.target.dataset.status);if(!Number.isInteger(idx)||!current[idx])return;if(e.target.dataset.select!==undefined)current[idx].selected=e.target.checked;if(e.target.dataset.status!==undefined)current[idx].status=e.target.value});
-$('results').addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;const x=current[Number(b.dataset.copy)];if(!x)return;try{await navigator.clipboard.writeText(x.query);toast('تم نسخ استعلام البحث.')}catch{toast('تعذر النسخ تلقائيًا؛ يمكنك نسخ الاستعلام يدويًا.')}});
-function readSaved(){try{return JSON.parse(localStorage.getItem('totaDiscovery.saved.v1')||'[]')}catch{return[]}}
-function writeSaved(a){try{localStorage.setItem('totaDiscovery.saved.v1',JSON.stringify(a));return true}catch{return false}}
-function save(){if(formDirty){toast('عدّلت البيانات؛ حدّث روابط البحث قبل الحفظ.');return}if(!current.length){toast('أنشئ روابط البحث أولًا.');return}const d=inputs(),saved=readSaved(),id='case-'+Date.now(),selected=current.filter(x=>x.selected!==false);if(!selected.length){toast('اختر رابطًا واحدًا على الأقل للحفظ.');return}const entry={id,createdAt:new Date().toISOString(),data:d,links:selected.map(x=>({...x}))};saved.unshift(entry);if(!writeSaved(saved)){toast('المتصفح منع التخزين؛ جرّب تشغيل الملف في متصفح عادي.');return}lastSavedId=null;$('updateSaved').classList.add('hidden');renderSaved();toast('تم حفظ نسخة بحث جديدة على هذا الجهاز.')}
-function updateSaved(){if(formDirty){toast('عدّلت البيانات؛ حدّث روابط البحث قبل تحديث السجل المحفوظ.');return}if(!lastSavedId||!current.length){toast('افتح سجلًا محفوظًا أولًا ثم أنشئ روابطه بعد التعديل.');return}const saved=readSaved(),idx=saved.findIndex(x=>x.id===lastSavedId),selected=current.filter(x=>x.selected!==false);if(idx<0){toast('السجل الأصلي لم يعد موجودًا؛ احفظه كسجل جديد.');return}if(!selected.length){toast('اختر رابطًا واحدًا على الأقل للحفظ.');return}saved[idx]={...saved[idx],updatedAt:new Date().toISOString(),data:inputs(),links:selected.map(x=>({...x}))};if(!writeSaved(saved)){toast('تعذر تحديث التخزين المحلي.');return}renderSaved();toast('تم تحديث السجل المحفوظ صراحةً.')}
-function renderSaved(){const items=readSaved(),box=$('savedList');if(!items.length){box.className='empty';box.textContent='لا توجد عمليات محفوظة بعد.';return}box.className='';box.innerHTML=items.map(x=>`<div class="saved-item"><div><div class="saved-title">${esc(x.data.name||x.data.company||x.data.email||x.data.phone||'بحث بدون اسم')}</div><div class="saved-meta">${esc(countryNames[x.data.country]||'')} · ${new Date(x.updatedAt||x.createdAt).toLocaleString('ar-EG')} · ${x.links.length} رابط</div></div><div class="saved-actions"><button data-load="${esc(x.id)}">فتح/تعديل</button><button data-delete="${esc(x.id)}">حذف</button></div></div>`).join('')}
-$('savedList').addEventListener('click',e=>{const load=e.target.closest('[data-load]'),del=e.target.closest('[data-delete]');if(load){const entry=readSaved().find(x=>x.id===load.dataset.load);if(!entry)return;for(const id of fields)$(id).value=entry.data[id]||'';document.querySelectorAll('input[name="cat"]').forEach(c=>c.checked=(entry.data.categories||[]).includes(c.value));lastSavedId=entry.id;$('updateSaved').classList.remove('hidden');current=[];build();current.forEach(x=>{const old=entry.links.find(y=>y.url===x.url);if(old){x.note=old.note||'';x.status=old.status||'جديدة';x.selected=true}});render();toast('تم تحميل السجل. عدّل البيانات ثم حدّث الروابط؛ التحديث المحفوظ يحتاج ضغط زر مستقل.')}if(del){const arr=readSaved().filter(x=>x.id!==del.dataset.delete);writeSaved(arr);if(lastSavedId===del.dataset.delete){lastSavedId=null;$('updateSaved').classList.add('hidden')}renderSaved();toast('تم حذف السجل المحلي.')}});
-function exportV1Backup(){const storageKey='totaDiscovery.saved.v1';try{const raw=localStorage.getItem(storageKey);let records=[];if(raw!==null){records=JSON.parse(raw);if(!Array.isArray(records)){toast('تعذر التصدير: بيانات V1 ليست قائمة سجلات صالحة.');return}}const backup={backupVersion:1,sourceSchema:storageKey,storageKeyPresent:raw!==null,exportedAt:new Date().toISOString(),origin:location.origin,recordCount:records.length,records};const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='totaDiscovery-v1-backup-'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('تم تنزيل نسخة V1 الاحتياطية محليًا ('+records.length+' سجل).')}catch(e){toast('تعذر تصدير نسخة V1 الاحتياطية: '+(e&&e.message||'خطأ غير معروف.'))}}
-function xml(s){return esc(s).replaceAll('\n','&#10;')}
-function exportXls(){if(formDirty){toast('حدّث روابط البحث حسب البيانات المعدّلة قبل التصدير.');return}const d=inputs(),saved=readSaved(),selected=current.filter(x=>x.selected!==false);if(current.length&&!selected.length){toast('اختر رابطًا واحدًا على الأقل للتصدير.');return}if(!current.length&&!saved.length){toast('أنشئ روابط أو احفظ بحثًا قبل التصدير.');return}const caseData=current.length?d:saved[0].data;const rows=selected.map(x=>[countryNames[caseData.country],x.cat,x.label,x.query,x.url,x.status||'جديدة',x.note||'',new Date().toISOString()]);const all=current.length?rows:saved.flatMap(c=>c.links.map(x=>[countryNames[c.data.country],x.cat,x.label,x.query,x.url,x.status||'جديدة',x.note||'',c.updatedAt||c.createdAt]));const headers=['الدولة','القسم','المصدر','استعلام البحث','رابط البحث','الحالة','ملاحظة المستخدم','تاريخ الحفظ'];const sheet=(name,table)=>`<Worksheet ss:Name="${name}"><Table><Row>${table[0].map(v=>`<Cell><Data ss:Type="String">${xml(v)}</Data></Cell>`).join('')}</Row>${table.slice(1).map(r=>`<Row>${r.map(v=>`<Cell><Data ss:Type="String">${xml(v)}</Data></Cell>`).join('')}</Row>`).join('')}</Table></Worksheet>`;const info=[['الحقل','القيمة'],['الاسم',caseData.name],['اسم بديل',caseData.alias],['الإيميل',caseData.email],['الهاتف',caseData.phone],['الشركة',caseData.company],['المدينة',caseData.city],['الدولة',countryNames[caseData.country]],['تاريخ التصدير',new Date().toISOString()]];const xmlDoc=`<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Styles><Style ss:ID="Default" ss:Name="Normal"><Alignment ss:Vertical="Center"/></Style></Styles>${sheet('بيانات البحث',info)}${sheet('روابط البحث',[headers,...all])}</Workbook>`;const blob=new Blob(['\uFEFF',xmlDoc],{type:'application/vnd.ms-excel;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='نتائج-البحث.xls';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('تم تنزيل ملف Excel-compatible.')};
-$('generate').addEventListener('click',()=>{build()});$('save').addEventListener('click',save);$('updateSaved').addEventListener('click',updateSaved);$('export').addEventListener('click',exportXls);$('exportBackupV1').addEventListener('click',exportV1Backup);$('print').addEventListener('click',()=>{if(formDirty){toast('حدّث روابط البحث قبل الطباعة.');return}if(!current.length){toast('أنشئ روابط البحث أولًا.');return}window.print()});$('reset').addEventListener('click',()=>{for(const id of fields)$(id).value='';document.querySelectorAll('input[name="cat"]').forEach(c=>c.checked=true);current=[];lastSavedId=null;formDirty=false;$('updateSaved').classList.add('hidden');$('results').innerHTML='<div class="empty">ستظهر هنا روابط البحث حسب البيانات والدولة والمجالات التي اخترتها.</div>';$('resultCount').textContent='أدخل معيارًا واحدًا على الأقل ثم أنشئ الروابط';$('printMeta').classList.add('hidden')});
-for(const id of ['name','alias','email','phone','company','city','country'])$(id).addEventListener('input',()=>{if(current.length){formDirty=true;$('updateSaved').disabled=true;$('resultCount').textContent='تم تعديل البيانات — اضغط «إنشاء / تحديث روابط البحث» لتحديث الروابط.'}});document.querySelectorAll('input[name="cat"]').forEach(c=>c.addEventListener('change',()=>{if(current.length){formDirty=true;$('updateSaved').disabled=true;$('resultCount').textContent='تم تعديل نطاق البحث — اضغط «إنشاء / تحديث روابط البحث» لتحديث الروابط.'}}));
-renderSaved();
+(()=>{
+const factories={"backup.js":(module,exports,require)=>{
+'use strict';
+
+const { V1_KEY } = require('./model.js');
+
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function validateBackup(backup) {
+  const errors = [];
+  if (!backup || typeof backup !== 'object' || Array.isArray(backup)) {
+    return { valid: false, errors: ['Backup must be a JSON object.'] };
+  }
+  if (backup.backupVersion !== 1) errors.push('Unsupported backupVersion.');
+  if (backup.sourceSchema !== V1_KEY) errors.push('Unexpected sourceSchema.');
+  if (typeof backup.storageKeyPresent !== 'boolean') errors.push('storageKeyPresent must be boolean.');
+  if (typeof backup.exportedAt !== 'string' || Number.isNaN(Date.parse(backup.exportedAt))) {
+    errors.push('exportedAt must be a valid date string.');
+  }
+  if (!Array.isArray(backup.records)) errors.push('records must be an array.');
+  if (!Number.isInteger(backup.recordCount) || backup.recordCount < 0 ||
+      !Array.isArray(backup.records) || backup.recordCount !== backup.records.length) {
+    errors.push('recordCount must match records.length.');
+  }
+  if (Array.isArray(backup.records) && backup.records.some(record =>
+    record === null || typeof record !== 'object' || Array.isArray(record))) {
+    errors.push('Every V1 record must be a JSON object.');
+  }
+  if (backup.storageKeyPresent === false && Array.isArray(backup.records) && backup.records.length !== 0) {
+    errors.push('An absent V1 key cannot contain records.');
+  }
+  return { valid: errors.length === 0, errors };
+}
+
+function createBackupFromStorage(storage, options = {}) {
+  if (!storage || typeof storage.getItem !== 'function') {
+    const error = new TypeError('A readable storage adapter is required.');
+    error.code = 'INVALID_STORAGE';
+    throw error;
+  }
+  const raw = storage.getItem(V1_KEY);
+  let records = [];
+  const storageKeyPresent = raw !== null;
+  if (storageKeyPresent) {
+    try {
+      records = JSON.parse(raw);
+    } catch (_) {
+      const error = new Error('V1 LocalStorage contains malformed JSON; export stopped.');
+      error.code = 'CORRUPT_V1_JSON';
+      throw error;
+    }
+    if (!Array.isArray(records) || records.some(record =>
+      record === null || typeof record !== 'object' || Array.isArray(record))) {
+      const error = new Error('V1 LocalStorage is not a record array; export stopped.');
+      error.code = 'INVALID_V1_SHAPE';
+      throw error;
+    }
+    records = cloneJson(records);
+  }
+  const now = typeof options.now === 'function' ? options.now() : new Date().toISOString();
+  const origin = Object.hasOwn(options, 'origin') ? options.origin :
+    (typeof globalThis.location?.origin === 'string' ? globalThis.location.origin : null);
+  return {
+    backupVersion: 1,
+    sourceSchema: V1_KEY,
+    storageKeyPresent,
+    exportedAt: now,
+    origin,
+    recordCount: records.length,
+    records
+  };
+}
+
+function restoreBackup(storage, backup, options = {}) {
+  const validation = validateBackup(backup);
+  if (!validation.valid) {
+    return { success: false, status: 'blocked', code: 'INVALID_BACKUP', errors: validation.errors, rollbackSucceeded: true };
+  }
+  if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' ||
+      typeof storage.removeItem !== 'function') {
+    return { success: false, status: 'blocked', code: 'INVALID_STORAGE', errors: [], rollbackSucceeded: true };
+  }
+
+  let before;
+  try {
+    before = storage.getItem(V1_KEY);
+  } catch (_) {
+    return { success: false, status: 'blocked', code: 'STORAGE_READ_FAILED', errors: [], rollbackSucceeded: true };
+  }
+  const target = backup.storageKeyPresent ? JSON.stringify(cloneJson(backup.records)) : null;
+  if (before === target) {
+    return { success: true, status: 'already-restored', storageKeyPresent: target !== null, recordCount: backup.records.length };
+  }
+  if (before !== null && options.allowOverwrite !== true) {
+    return {
+      success: false, status: 'blocked', code: 'RESTORE_TARGET_NOT_EMPTY',
+      errors: ['Existing V1 value was left unchanged; explicit overwrite permission is required.'],
+      rollbackSucceeded: true
+    };
+  }
+  try {
+    if (target === null) storage.removeItem(V1_KEY);
+    else storage.setItem(V1_KEY, target);
+    const after = storage.getItem(V1_KEY);
+    if (after !== target) throw new Error('Restore read-back mismatch.');
+    return { success: true, status: 'restored', storageKeyPresent: after !== null, recordCount: backup.records.length };
+  } catch (_) {
+    let rollbackSucceeded = false;
+    try {
+      if (before === null) storage.removeItem(V1_KEY);
+      else storage.setItem(V1_KEY, before);
+      rollbackSucceeded = storage.getItem(V1_KEY) === before;
+    } catch (_) {
+      rollbackSucceeded = false;
+    }
+    return {
+      success: false,
+      status: 'restore-failed',
+      code: 'RESTORE_WRITE_OR_VERIFY_FAILED',
+      errors: [],
+      rollbackSucceeded
+    };
+  }
+}
+
+function serializeBackup(backup) {
+  const validation = validateBackup(backup);
+  if (!validation.valid) {
+    const error = new TypeError(`Invalid V1 backup: ${validation.errors.join(' ')}`);
+    error.code = 'INVALID_BACKUP';
+    error.errors = validation.errors;
+    throw error;
+  }
+  return JSON.stringify(backup, null, 2);
+}
+
+function parseBackup(jsonText) {
+  if (typeof jsonText !== 'string') {
+    const error = new TypeError('Backup JSON must be text.');
+    error.code = 'CORRUPT_BACKUP_JSON';
+    throw error;
+  }
+  let backup;
+  try {
+    backup = JSON.parse(jsonText);
+  } catch (_) {
+    const error = new Error('Backup file is not valid JSON.');
+    error.code = 'CORRUPT_BACKUP_JSON';
+    throw error;
+  }
+  const validation = validateBackup(backup);
+  if (!validation.valid) {
+    const error = new TypeError(`Invalid V1 backup: ${validation.errors.join(' ')}`);
+    error.code = 'INVALID_BACKUP';
+    error.errors = validation.errors;
+    throw error;
+  }
+  return backup;
+}
+
+module.exports = {
+  validateBackup, createBackupFromStorage, restoreBackup, serializeBackup, parseBackup
+};
+
+},
+"coverage.js":(module,exports,require)=>{
+'use strict';
+
+const { matchCandidate, MATCH_LEVELS } = require('./matching.js');
+
+const LEVEL_NAMES = Object.freeze(['Primary', 'Expanded', 'Deep']);
+
+function isObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function queryWasReviewed(query) {
+  return query.reviewed === true || query.reviewStatus === 'Reviewed';
+}
+
+function setSearchReviewStatus(queries, searchUrl, status = 'Reviewed') {
+  if (!Array.isArray(queries)) throw new TypeError('Search queries must be an array.');
+  if (typeof searchUrl !== 'string' || !searchUrl.trim()) throw new TypeError('Search URL must be a non-empty string.');
+  if (!['Reviewed', 'Pending'].includes(status)) throw new TypeError('Search review status must be Reviewed or Pending.');
+  const index = queries.findIndex(query => query && query.url === searchUrl);
+  if (index < 0) throw new Error(`Search URL not found: ${searchUrl}`);
+  return queries.map((query, queryIndex) => queryIndex === index
+    ? { ...query, reviewStatus: status }
+    : query);
+}
+
+function computeSearchCoverage({ queries, candidates, subject } = {}) {
+  if (!Array.isArray(queries)) throw new TypeError('Search coverage queries must be an array.');
+  if (!Array.isArray(candidates)) throw new TypeError('Search coverage candidates must be an array.');
+  if (!isObject(subject)) throw new TypeError('Search coverage requires the case Subject.');
+
+  const levels = Object.fromEntries(LEVEL_NAMES.map(name => [name, { generated: 0, reviewed: 0, pending: 0 }]));
+  const queriesPerEngine = {};
+  let reviewed = 0;
+  for (const query of queries) {
+    if (!isObject(query)) throw new TypeError('Every search coverage query must be an object.');
+    const isReviewed = queryWasReviewed(query);
+    if (isReviewed) reviewed += 1;
+    const engineName = query.searchEngine ?? query.engine;
+    if (typeof engineName === 'string' && engineName.trim()) {
+      const key = engineName.trim();
+      queriesPerEngine[key] = (queriesPerEngine[key] ?? 0) + 1;
+    }
+    const level = levels[query.level];
+    if (level) {
+      level.generated += 1;
+      level[isReviewed ? 'reviewed' : 'pending'] += 1;
+    }
+  }
+
+  const uniqueCandidates = new Map();
+  for (const candidate of candidates) {
+    if (!isObject(candidate) || typeof candidate.id !== 'string' || !candidate.id.trim()) {
+      throw new TypeError('Every coverage Candidate must have a non-empty id.');
+    }
+    if (!uniqueCandidates.has(candidate.id)) uniqueCandidates.set(candidate.id, candidate);
+  }
+
+  const identityConfidence = Object.fromEntries(MATCH_LEVELS.map(level => [level.name, 0]));
+  let rejectedEvidenceCount = 0;
+  let evidenceCount = 0;
+  let rejected = 0;
+  for (const candidate of uniqueCandidates.values()) {
+    const match = matchCandidate(subject, candidate);
+    identityConfidence[match.matchLevel] += 1;
+    if (candidate.status === 'Rejected') rejected += 1;
+    if (candidate.evidence !== undefined && !Array.isArray(candidate.evidence)) {
+      throw new TypeError(`Candidate ${candidate.id} evidence must be an array.`);
+    }
+    for (const evidence of candidate.evidence ?? []) {
+      evidenceCount += 1;
+      if (evidence?.status === 'Rejected') rejectedEvidenceCount += 1;
+    }
+  }
+
+  return {
+    queriesGenerated: queries.length,
+    reviewed,
+    pending: queries.length - reviewed,
+    levels,
+    queriesPerEngine,
+    candidatesFound: uniqueCandidates.size,
+    identityConfidence,
+    rejected,
+    evidenceCount,
+    rejectedEvidenceCount
+  };
+}
+
+module.exports = { computeSearchCoverage, setSearchReviewStatus, LEVEL_NAMES };
+
+},
+"evidence.js":(module,exports,require)=>{
+'use strict';
+
+const { normalizePhone, normalizeEmail, normalizeUsername } = require('./normalize.js');
+
+const EVIDENCE_STATUSES = Object.freeze(['Confirmed', 'Probable', 'Needs Review', 'Rejected']);
+const TRACKING_PARAMETERS = new Set([
+  'gclid', 'dclid', 'fbclid', 'msclkid', 'mc_cid', 'mc_eid', '_ga', '_gid', '_gl',
+  'yclid', 'igshid', 'ref_src', 'ref_url', 'vero_conv', 'vero_id', 'mkt_tok',
+  '_hsenc', '_hsmi', 'gbraid', 'wbraid'
+]);
+
+function isPlainObject(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null;
+}
+
+function hasText(value) {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function normalizeEvidenceUrl(input) {
+  if (typeof input !== 'string' || !input.trim()) throw new TypeError('Evidence URL must be a non-empty HTTP(S) URL.');
+  let url;
+  try {
+    url = new URL(input);
+  } catch {
+    throw new TypeError('Evidence URL must be a valid HTTP(S) URL.');
+  }
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+    throw new TypeError('Evidence URL must use HTTP or HTTPS.');
+  }
+  const retained = [];
+  for (const [key, value] of url.searchParams.entries()) {
+    const lowered = key.toLowerCase();
+    if (lowered.startsWith('utm_') || TRACKING_PARAMETERS.has(lowered)) continue;
+    retained.push([key, value]);
+  }
+  retained.sort(([keyA, valueA], [keyB, valueB]) =>
+    keyA.localeCompare(keyB) || valueA.localeCompare(valueB));
+  url.search = '';
+  for (const [key, value] of retained) url.searchParams.append(key, value);
+  return url.toString();
+}
+
+function resolveTimestamp(nowOption) {
+  const value = typeof nowOption === 'function' ? nowOption() : nowOption;
+  const date = value === undefined ? new Date() : new Date(value);
+  if (Number.isNaN(date.getTime())) throw new TypeError('Evidence dateAdded must be a valid date.');
+  return date.toISOString();
+}
+
+function makeEvidenceId() {
+  if (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function') {
+    return `evidence-${globalThis.crypto.randomUUID()}`;
+  }
+  return `evidence-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+function uniqueEngines(...values) {
+  const names = [];
+  for (const value of values) {
+    const entries = Array.isArray(value) ? value : [value];
+    for (const entry of entries) {
+      if (hasText(entry) && !names.includes(entry.trim())) names.push(entry.trim());
+    }
+  }
+  return names;
+}
+
+function recordCandidateDiscovery(caseRecord, candidateId, searchEngine) {
+  if (!isPlainObject(caseRecord) || !Array.isArray(caseRecord.candidates)) {
+    throw new TypeError('Case record must contain a candidates array.');
+  }
+  if (!hasText(searchEngine)) throw new TypeError('Search engine must be a non-empty string.');
+  const candidateIndex = caseRecord.candidates.findIndex(candidate => candidate && candidate.id === candidateId);
+  if (candidateIndex < 0) throw new Error(`Candidate not found: ${candidateId}`);
+  const candidates = caseRecord.candidates.map((candidate, index) => index === candidateIndex
+    ? { ...candidate, foundVia: uniqueEngines(candidate.foundVia, searchEngine) }
+    : candidate);
+  return { ...caseRecord, candidates };
+}
+
+function addEvidenceToCandidate(caseRecord, candidateId, evidenceInput, options = {}) {
+  if (!isPlainObject(caseRecord) || !Array.isArray(caseRecord.candidates)) {
+    throw new TypeError('Case record must contain a candidates array.');
+  }
+  if (!isPlainObject(evidenceInput)) throw new TypeError('Evidence must be an object.');
+  const candidateIndex = caseRecord.candidates.findIndex(candidate => candidate && candidate.id === candidateId);
+  if (candidateIndex < 0) throw new Error(`Candidate not found: ${candidateId}`);
+
+  if (!hasText(evidenceInput.source)) throw new TypeError('Evidence source must be a non-empty string.');
+  if (typeof evidenceInput.url !== 'string' || !evidenceInput.url.trim()) {
+    throw new TypeError('Evidence URL must be a non-empty HTTP(S) URL.');
+  }
+  const urlKey = normalizeEvidenceUrl(evidenceInput.url);
+  if (evidenceInput.notes !== undefined && typeof evidenceInput.notes !== 'string') {
+    throw new TypeError('Evidence notes must be a string.');
+  }
+  const status = evidenceInput.status ?? 'Needs Review';
+  if (!EVIDENCE_STATUSES.includes(status)) throw new TypeError(`Unsupported Evidence status: ${status}`);
+  if (evidenceInput.searchEngine !== undefined && !hasText(evidenceInput.searchEngine)) {
+    throw new TypeError('Evidence searchEngine must be a non-empty string when provided.');
+  }
+  if (evidenceInput.foundVia !== undefined &&
+      !(hasText(evidenceInput.foundVia) || (Array.isArray(evidenceInput.foundVia) && evidenceInput.foundVia.every(hasText)))) {
+    throw new TypeError('Evidence foundVia must be a non-empty engine name or an array of engine names.');
+  }
+
+  const candidate = caseRecord.candidates[candidateIndex];
+  const existingEvidence = candidate.evidence ?? [];
+  if (!Array.isArray(existingEvidence)) throw new TypeError('Candidate evidence must be an array.');
+  const engineNames = uniqueEngines(evidenceInput.foundVia, evidenceInput.searchEngine);
+  const duplicate = existingEvidence.find(item => item && normalizeEvidenceUrl(item.url) === urlKey);
+
+  if (duplicate) {
+    const updatedEvidence = existingEvidence.map(item => item.id === duplicate.id
+      ? {
+          ...item,
+          ...(!item.searchEngine && engineNames.length ? { searchEngine: engineNames[0] } : {}),
+          foundVia: uniqueEngines(item.foundVia, item.searchEngine, engineNames)
+        }
+      : item);
+    const updatedCandidate = {
+      ...candidate,
+      foundVia: uniqueEngines(candidate.foundVia, engineNames),
+      evidence: updatedEvidence
+    };
+    const candidates = caseRecord.candidates.map((item, index) => index === candidateIndex ? updatedCandidate : item);
+    return {
+      caseRecord: { ...caseRecord, candidates },
+      added: false,
+      duplicate: true,
+      evidenceId: duplicate.id
+    };
+  }
+
+  const id = options.id ?? makeEvidenceId();
+  if (!hasText(id)) throw new TypeError('Evidence id must be a non-empty string.');
+  const allEvidence = caseRecord.candidates.flatMap(item => Array.isArray(item?.evidence) ? item.evidence : []);
+  if (allEvidence.some(item => item && item.id === id)) throw new Error(`Evidence id already exists: ${id}`);
+  const savedEvidence = {
+    id,
+    candidateId,
+    source: evidenceInput.source,
+    url: evidenceInput.url,
+    dateAdded: resolveTimestamp(options.now),
+    notes: evidenceInput.notes ?? '',
+    status,
+    ...(evidenceInput.searchEngine ? { searchEngine: evidenceInput.searchEngine } : {}),
+    ...(engineNames.length ? { foundVia: engineNames } : {})
+  };
+  const updatedCandidate = {
+    ...candidate,
+    ...(engineNames.length ? { foundVia: uniqueEngines(candidate.foundVia, engineNames) } : {}),
+    evidence: [...existingEvidence, savedEvidence]
+  };
+  const candidates = caseRecord.candidates.map((item, index) => index === candidateIndex ? updatedCandidate : item);
+  return {
+    caseRecord: { ...caseRecord, candidates },
+    added: true,
+    duplicate: false,
+    evidenceId: id
+  };
+}
+
+function setEvidenceStatus(caseRecord, candidateId, evidenceId, status) {
+  if (!isPlainObject(caseRecord) || !Array.isArray(caseRecord.candidates)) {
+    throw new TypeError('Case record must contain a candidates array.');
+  }
+  if (!EVIDENCE_STATUSES.includes(status)) throw new TypeError(`Unsupported Evidence status: ${status}`);
+  const candidateIndex = caseRecord.candidates.findIndex(candidate => candidate && candidate.id === candidateId);
+  if (candidateIndex < 0) throw new Error(`Candidate not found: ${candidateId}`);
+  const candidate = caseRecord.candidates[candidateIndex];
+  const evidenceItems = candidate.evidence ?? [];
+  if (!Array.isArray(evidenceItems)) throw new TypeError('Candidate evidence must be an array.');
+  if (!evidenceItems.some(item => item && item.id === evidenceId)) {
+    throw new Error(`Evidence not found: ${evidenceId}`);
+  }
+  const updatedCandidate = {
+    ...candidate,
+    evidence: evidenceItems.map(item => item.id === evidenceId ? { ...item, status } : item)
+  };
+  const candidates = caseRecord.candidates.map((item, index) => index === candidateIndex ? updatedCandidate : item);
+  return { caseRecord: { ...caseRecord, candidates }, updated: true, evidenceId };
+}
+
+function identifierKey(candidate, field) {
+  if (!hasText(candidate[field])) return null;
+  if (field === 'phone') {
+    const normalized = normalizePhone(candidate.phone, candidate.country);
+    return normalized.valid ? normalized.comparisonKey : null;
+  }
+  if (field === 'email') return normalizeEmail(candidate.email).comparisonKey;
+  if (field === 'username') return normalizeUsername(candidate.username).comparisonKey;
+  return null;
+}
+
+function findPossibleCandidateDuplicates(candidates) {
+  if (!Array.isArray(candidates)) throw new TypeError('Candidates must be an array.');
+  const pairs = [];
+  const fields = ['phone', 'email', 'username'];
+  for (let leftIndex = 0; leftIndex < candidates.length; leftIndex += 1) {
+    const left = candidates[leftIndex];
+    if (!isPlainObject(left) || !hasText(left.id)) throw new TypeError(`Candidate at index ${leftIndex} needs an id.`);
+    for (let rightIndex = leftIndex + 1; rightIndex < candidates.length; rightIndex += 1) {
+      const right = candidates[rightIndex];
+      if (!isPlainObject(right) || !hasText(right.id)) throw new TypeError(`Candidate at index ${rightIndex} needs an id.`);
+      if (left.id === right.id) continue;
+      const matchedIdentifiers = fields.filter(field => {
+        const leftKey = identifierKey(left, field);
+        const rightKey = identifierKey(right, field);
+        return leftKey !== null && rightKey !== null && leftKey === rightKey;
+      });
+      if (!matchedIdentifiers.length) continue;
+      const conflictingIdentifiers = fields.filter(field => {
+        if (matchedIdentifiers.includes(field) || !hasText(left[field]) || !hasText(right[field])) return false;
+        const leftKey = identifierKey(left, field);
+        const rightKey = identifierKey(right, field);
+        return leftKey !== null && rightKey !== null && leftKey !== rightKey;
+      });
+      pairs.push({
+        candidateId: left.id,
+        otherCandidateId: right.id,
+        status: 'Possible Duplicate',
+        matchedIdentifiers,
+        conflictingIdentifiers,
+        autoMerged: false
+      });
+    }
+  }
+  return pairs;
+}
+
+module.exports = {
+  EVIDENCE_STATUSES,
+  normalizeEvidenceUrl,
+  addEvidenceToCandidate,
+  setEvidenceStatus,
+  recordCandidateDiscovery,
+  findPossibleCandidateDuplicates
+};
+
+},
+"licensing.js":(module,exports,require)=>{
+'use strict';
+
+const LICENSE_SCHEMA_VERSION = 1;
+const PASSWORD_ALGORITHM = 'PBKDF2-HMAC-SHA-256';
+const DEFAULT_PBKDF2_ITERATIONS = 600000;
+const MIN_PASSWORD_LENGTH = 12;
+
+function getCrypto(provider) {
+  const value = provider || globalThis.crypto;
+  if (!value?.subtle || typeof value.getRandomValues !== 'function') throw new Error('Web Crypto is unavailable; open this app in a secure browser context.');
+  return value;
+}
+function bytesToHex(bytes) { return Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join(''); }
+function hexToBytes(hex) {
+  if (typeof hex !== 'string' || !/^(?:[0-9a-f]{2})+$/i.test(hex)) throw new TypeError('Expected a non-empty hexadecimal byte string.');
+  const bytes = new Uint8Array(hex.length / 2);
+  for (let index = 0; index < bytes.length; index += 1) bytes[index] = Number.parseInt(hex.slice(index * 2, index * 2 + 2), 16);
+  return bytes;
+}
+function validatePassword(password) {
+  if (typeof password !== 'string' || password.length < MIN_PASSWORD_LENGTH) throw new TypeError(`Password must contain at least ${MIN_PASSWORD_LENGTH} characters.`);
+}
+function validateIdentity(userId, username) {
+  if (typeof userId !== 'string' || !/^TD-[A-Z0-9-]{3,48}$/i.test(userId.trim())) throw new TypeError('User ID format is invalid.');
+  if (typeof username !== 'string' || !/^[a-zA-Z0-9._-]{3,40}$/.test(username.trim())) throw new TypeError('Username must be 3–40 letters, numbers, dots, underscores, or hyphens.');
+}
+async function createPasswordRecord(password, options = {}) {
+  validatePassword(password);
+  const crypto = getCrypto(options.crypto);
+  const iterations = options.iterations ?? DEFAULT_PBKDF2_ITERATIONS;
+  if (!Number.isInteger(iterations) || iterations < 1000 || iterations > 2000000) throw new TypeError('PBKDF2 iterations must be an integer from 1,000 to 2,000,000.');
+  const salt = options.salt ? hexToBytes(options.salt) : crypto.getRandomValues(new Uint8Array(16));
+  if (salt.length < 16) throw new TypeError('Password salt must contain at least 16 bytes.');
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations, hash: 'SHA-256' }, key, 256);
+  return { algorithm: PASSWORD_ALGORITHM, iterations, salt: bytesToHex(salt), hash: bytesToHex(new Uint8Array(bits)) };
+}
+function validateLicenseDocument(document) {
+  const errors = [];
+  if (!document || typeof document !== 'object' || Array.isArray(document)) return { valid: false, errors: ['License document must be an object.'] };
+  if (document.schemaVersion !== LICENSE_SCHEMA_VERSION) errors.push('Unsupported license schemaVersion.');
+  if (!Array.isArray(document.licenses)) errors.push('licenses must be an array.');
+  const ids = new Set(), names = new Set();
+  for (const [index, license] of (Array.isArray(document.licenses) ? document.licenses : []).entries()) {
+    if (!license || typeof license !== 'object' || Array.isArray(license)) { errors.push(`License ${index} must be an object.`); continue; }
+    if (typeof license.userId !== 'string' || !license.userId.trim()) errors.push(`License ${index} has no userId.`);
+    else if (ids.has(license.userId.toUpperCase())) errors.push(`Duplicate userId: ${license.userId}.`);
+    else ids.add(license.userId.toUpperCase());
+    if (typeof license.username !== 'string' || !license.username.trim()) errors.push(`License ${index} has no username.`);
+    else if (names.has(license.username.toLowerCase())) errors.push(`Duplicate username: ${license.username}.`);
+    else names.add(license.username.toLowerCase());
+    if (!['active', 'disabled'].includes(license.status)) errors.push(`License ${index} status must be active or disabled.`);
+    if (typeof license.password === 'string' || Object.hasOwn(license, 'passwordPlaintext')) errors.push(`License ${index} contains a plaintext password field.`);
+    const record = license.password;
+    if (!record || typeof record !== 'object' || Array.isArray(record)) { errors.push(`License ${index} password record is missing.`); continue; }
+    if (record.algorithm !== PASSWORD_ALGORITHM) errors.push(`License ${index} password algorithm is unsupported.`);
+    if (!Number.isInteger(record.iterations) || record.iterations < 1000 || record.iterations > 2000000) errors.push(`License ${index} PBKDF2 iterations are invalid.`);
+    try { if (hexToBytes(record.salt).length < 16) errors.push(`License ${index} password salt is too short.`); } catch { errors.push(`License ${index} password salt is invalid.`); }
+    try { if (hexToBytes(record.hash).length !== 32) errors.push(`License ${index} password hash must be 32 bytes.`); } catch { errors.push(`License ${index} password hash is invalid.`); }
+  }
+  return { valid: errors.length === 0, errors };
+}
+async function createLicenseRecord({ userId, username, password, status = 'active', now = new Date().toISOString() }, options = {}) {
+  validateIdentity(userId, username);
+  if (!['active', 'disabled'].includes(status)) throw new TypeError('Status must be active or disabled.');
+  if (typeof now !== 'string' || Number.isNaN(Date.parse(now))) throw new TypeError('Timestamp must be a valid ISO date.');
+  return { userId: userId.trim(), username: username.trim(), status, password: await createPasswordRecord(password, options), createdAt: now, updatedAt: now };
+}
+async function verifyLicenseLogin(document, credentials, options = {}) {
+  const validation = validateLicenseDocument(document);
+  if (!validation.valid) return { ok: false, code: 'LICENSE_DATA_INVALID', errors: validation.errors };
+  if (!credentials || typeof credentials !== 'object') return { ok: false, code: 'INVALID_CREDENTIALS' };
+  const userId = typeof credentials.userId === 'string' ? credentials.userId.trim().toUpperCase() : '';
+  const username = typeof credentials.username === 'string' ? credentials.username.trim().toLowerCase() : '';
+  const license = document.licenses.find(item => item.userId.toUpperCase() === userId && item.username.toLowerCase() === username);
+  if (!license) return { ok: false, code: 'INVALID_CREDENTIALS' };
+  if (license.status !== 'active') return { ok: false, code: 'LICENSE_DISABLED', userId: license.userId };
+  if (typeof credentials.password !== 'string' || credentials.password.length < MIN_PASSWORD_LENGTH) return { ok: false, code: 'INVALID_CREDENTIALS' };
+  const candidate = await createPasswordRecord(credentials.password, { crypto: options.crypto, iterations: license.password.iterations, salt: license.password.salt });
+  let difference = 0;
+  for (let index = 0; index < candidate.hash.length; index += 1) difference |= candidate.hash.charCodeAt(index) ^ license.password.hash.toLowerCase().charCodeAt(index);
+  return difference === 0 ? { ok: true, code: 'LOGIN_OK', userId: license.userId, username: license.username } : { ok: false, code: 'INVALID_CREDENTIALS' };
+}
+async function changeLicensePassword(document, userId, newPassword, options = {}) {
+  const validation = validateLicenseDocument(document);
+  if (!validation.valid) throw new TypeError(`Invalid license document: ${validation.errors.join(' ')}`);
+  const normalizedId = String(userId || '').trim().toUpperCase();
+  const index = document.licenses.findIndex(item => item.userId.toUpperCase() === normalizedId);
+  if (index < 0) throw new Error(`License not found: ${userId}`);
+  const now = options.now ?? new Date().toISOString();
+  if (typeof now !== 'string' || Number.isNaN(Date.parse(now))) throw new TypeError('Timestamp must be a valid ISO date.');
+  const licenses = document.licenses.map((license, licenseIndex) => licenseIndex === index ? { ...license, updatedAt: now } : license);
+  licenses[index] = { ...licenses[index], password: await createPasswordRecord(newPassword, options) };
+  const result = { ...document, updatedAt: now, licenses };
+  const checked = validateLicenseDocument(result);
+  if (!checked.valid) throw new TypeError(`Password update produced invalid license data: ${checked.errors.join(' ')}`);
+  return result;
+}
+module.exports = {
+  LICENSE_SCHEMA_VERSION, PASSWORD_ALGORITHM, DEFAULT_PBKDF2_ITERATIONS, MIN_PASSWORD_LENGTH,
+  bytesToHex, hexToBytes, createPasswordRecord, createLicenseRecord, verifyLicenseLogin,
+  changeLicensePassword, validateLicenseDocument
+};
+
+},
+"matching.js":(module,exports,require)=>{
+'use strict';
+
+const { normalizeName, normalizePhone, normalizeEmail, normalizeUsername } = require('./normalize.js');
+
+const WEIGHTS = Object.freeze({ phone: 70, email: 70, username: 60, name: 20, company: 6, city: 4, country: 4 });
+const PENALTIES = Object.freeze({ phone: 55, email: 55, username: 45, name: 10, company: 10, city: 6, country: 6 });
+const MATCH_LEVELS = Object.freeze([
+  Object.freeze({ name: 'Strong', minimum: 80 }),
+  Object.freeze({ name: 'Probable', minimum: 55 }),
+  Object.freeze({ name: 'Weak', minimum: 20 }),
+  Object.freeze({ name: 'Unlikely', minimum: 0 })
+]);
+
+function hasText(value) {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function plainTextKey(value) {
+  return value.normalize('NFKC').trim().replace(/\s+/gu, ' ').toLowerCase();
+}
+
+function recordReason(target, conflicts, field, code, points, message, isConflict = false) {
+  const reason = { field, code, points, message };
+  target.push(reason);
+  if (isConflict) conflicts.push(reason);
+}
+
+function compareExact(subject, candidate, field, normalize, weight, penalty, reasons, conflicts) {
+  if (!hasText(subject[field]) || !hasText(candidate[field])) return 0;
+  const left = normalize(subject[field]);
+  const right = normalize(candidate[field]);
+  if (!left || !right) {
+    recordReason(reasons, conflicts, field, `UNVERIFIED_${field.toUpperCase()}`, 0,
+      `Both values are present, but ${field} could not be normalized for a reliable comparison.`);
+    return 0;
+  }
+  if (left === right) {
+    recordReason(reasons, conflicts, field, `EXACT_${field.toUpperCase()}_MATCH`, weight,
+      `Exact normalized ${field} match (+${weight}).`);
+    return weight;
+  }
+  recordReason(reasons, conflicts, field, `${field.toUpperCase()}_CONFLICT`, -penalty,
+    `The supplied ${field} values conflict (-${penalty}).`, true);
+  return -penalty;
+}
+
+function comparePhone(subject, candidate, reasons, conflicts) {
+  if (!hasText(subject.phone) || !hasText(candidate.phone)) return 0;
+  const subjectCountry = subject.country;
+  const candidateCountry = candidate.country;
+  const left = normalizePhone(subject.phone, subjectCountry);
+  const right = normalizePhone(candidate.phone, candidateCountry);
+  if (!left.valid || !right.valid) {
+    recordReason(reasons, conflicts, 'phone', 'UNVERIFIED_PHONE', 0,
+      'Phone comparison requires a valid number and supported country on both records.');
+    return 0;
+  }
+  if (left.comparisonKey === right.comparisonKey) {
+    recordReason(reasons, conflicts, 'phone', 'EXACT_PHONE_MATCH', WEIGHTS.phone,
+      `Exact normalized phone match (+${WEIGHTS.phone}).`);
+    return WEIGHTS.phone;
+  }
+  recordReason(reasons, conflicts, 'phone', 'PHONE_CONFLICT', -PENALTIES.phone,
+    `The normalized phone numbers differ (-${PENALTIES.phone}).`, true);
+  return -PENALTIES.phone;
+}
+
+function confidenceLevel(score) {
+  return MATCH_LEVELS.find(level => score >= level.minimum).name;
+}
+
+function matchCandidate(subject, candidate) {
+  if (!subject || typeof subject !== 'object' || Array.isArray(subject)) {
+    throw new TypeError('Subject must be an object.');
+  }
+  if (!candidate || typeof candidate !== 'object' || Array.isArray(candidate)) {
+    throw new TypeError('Candidate must be an object.');
+  }
+
+  const reasons = [];
+  const conflicts = [];
+  let score = 0;
+  score += comparePhone(subject, candidate, reasons, conflicts);
+  score += compareExact(subject, candidate, 'email', value => normalizeEmail(value).comparisonKey,
+    WEIGHTS.email, PENALTIES.email, reasons, conflicts);
+  score += compareExact(subject, candidate, 'username', value => normalizeUsername(value).comparisonKey,
+    WEIGHTS.username, PENALTIES.username, reasons, conflicts);
+  score += compareExact(subject, candidate, 'name', value => normalizeName(value).comparisonKey,
+    WEIGHTS.name, PENALTIES.name, reasons, conflicts);
+  for (const field of ['company', 'city', 'country']) {
+    score += compareExact(subject, candidate, field, plainTextKey,
+      WEIGHTS[field], PENALTIES[field], reasons, conflicts);
+  }
+
+  if (!reasons.some(reason => reason.points !== 0)) {
+    recordReason(reasons, conflicts, null, 'NO_COMPARABLE_FIELDS', 0,
+      'There are no comparable supplied values; identity cannot be established.');
+  }
+  if (score < 0) {
+    const adjustment = -score;
+    recordReason(reasons, conflicts, null, 'SCORE_FLOOR_ADJUSTMENT', adjustment,
+      `The raw score was below zero; a floor adjustment of +${adjustment} keeps the final score within range.`);
+    score = 0;
+  } else if (score > 100) {
+    const adjustment = 100 - score;
+    recordReason(reasons, conflicts, null, 'SCORE_CEILING_ADJUSTMENT', adjustment,
+      `The raw score exceeded 100; a ceiling adjustment of ${adjustment} keeps the final score within range.`);
+    score = 100;
+  }
+  return {
+    score,
+    matchLevel: confidenceLevel(score),
+    reasons,
+    conflicts,
+    matchedIdentifiers: reasons.filter(reason => reason.code.startsWith('EXACT_') &&
+      ['phone', 'email', 'username', 'name'].includes(reason.field)).map(reason => reason.field)
+  };
+}
+
+module.exports = { WEIGHTS, PENALTIES, MATCH_LEVELS, matchCandidate };
+
+},
+"model.js":(module,exports,require)=>{
+'use strict';
+
+const V1_KEY = 'totaDiscovery.saved.v1';
+const V2_KEY = 'totaDiscovery.saved.v2';
+
+function isPlainObject(value) {
+  if (value === null || typeof value !== 'object' || Array.isArray(value)) return false;
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null;
+}
+
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function analyzeLegacyRecords(records) {
+  const errors = [];
+  const warnings = [];
+  if (!Array.isArray(records)) return { valid: false, errors: ['V1 payload must be an array.'], warnings };
+  records.forEach((record, index) => {
+    if (!isPlainObject(record)) errors.push(`Record ${index} is not a JSON object.`);
+  });
+  if (errors.length) return { valid: false, errors, warnings };
+
+  const firstIndexById = new Map();
+  records.forEach((record, index) => {
+    if (!Object.hasOwn(record, 'id') || record.id === null || record.id === '') {
+      warnings.push({ code: 'MISSING_ID', sourceIndex: index });
+      return;
+    }
+    const id = String(record.id);
+    if (firstIndexById.has(id)) {
+      warnings.push({
+        code: 'DUPLICATE_ID', id: record.id,
+        firstSourceIndex: firstIndexById.get(id), sourceIndex: index
+      });
+    } else {
+      firstIndexById.set(id, index);
+    }
+  });
+  return { valid: true, errors, warnings };
+}
+
+function createV2Envelope(records, options = {}) {
+  const validation = analyzeLegacyRecords(records);
+  if (!validation.valid) {
+    const error = new TypeError(validation.errors.join(' '));
+    error.code = 'INVALID_V1_RECORDS';
+    throw error;
+  }
+  const migratedAt = options.migratedAt;
+  const storageKeyPresent = options.storageKeyPresent === true;
+  if (!storageKeyPresent && records.length !== 0) {
+    const error = new TypeError('An absent V1 key cannot contain migrated records.');
+    error.code = 'SOURCE_STATE_MISMATCH';
+    throw error;
+  }
+  return {
+    schemaVersion: 2,
+    sourceSchema: V1_KEY,
+    migratedAt,
+    source: {
+      storageKey: V1_KEY,
+      storageKeyPresent,
+      recordCount: records.length
+    },
+    cases: records.map((record, sourceIndex) => ({
+      schemaVersion: 2,
+      migration: { sourceSchema: V1_KEY, sourceIndex },
+      legacyRecord: cloneJson(record)
+    })),
+    warnings: validation.warnings
+  };
+}
+
+function validateV2Envelope(envelope) {
+  const errors = [];
+  if (!isPlainObject(envelope)) return { valid: false, errors: ['V2 envelope must be an object.'] };
+  if (envelope.schemaVersion !== 2) errors.push('Unsupported V2 schemaVersion.');
+  if (envelope.sourceSchema !== V1_KEY) errors.push('Unexpected V2 sourceSchema.');
+  if (!isPlainObject(envelope.source)) {
+    errors.push('V2 source metadata is missing.');
+  } else {
+    if (envelope.source.storageKey !== V1_KEY) errors.push('V2 source storage key is invalid.');
+    if (typeof envelope.source.storageKeyPresent !== 'boolean') errors.push('V2 source storageKeyPresent must be boolean.');
+    if (!Number.isInteger(envelope.source.recordCount) || envelope.source.recordCount < 0) {
+      errors.push('V2 source recordCount must be a non-negative integer.');
+    }
+  }
+  if (typeof envelope.migratedAt !== 'string' || Number.isNaN(Date.parse(envelope.migratedAt))) {
+    errors.push('V2 migratedAt must be a valid date string.');
+  }
+  if (!Array.isArray(envelope.cases)) errors.push('V2 cases must be an array.');
+  if (Array.isArray(envelope.cases)) {
+    envelope.cases.forEach((item, index) => {
+      if (!isPlainObject(item) || item.schemaVersion !== 2 || !isPlainObject(item.legacyRecord) ||
+          !isPlainObject(item.migration) || item.migration.sourceIndex !== index ||
+          item.migration.sourceSchema !== V1_KEY) {
+        errors.push(`V2 case ${index} is invalid.`);
+      }
+    });
+  }
+  if (isPlainObject(envelope.source) && Array.isArray(envelope.cases) &&
+      envelope.source.storageKeyPresent === false && envelope.cases.length !== 0) {
+    errors.push('An absent V1 key cannot have V2 cases.');
+  }
+  if (isPlainObject(envelope.source) && Array.isArray(envelope.cases) &&
+      envelope.source.recordCount !== envelope.cases.length) {
+    errors.push('V2 source recordCount does not match cases.length.');
+  }
+  return { valid: errors.length === 0, errors };
+}
+
+module.exports = {
+  V1_KEY,
+  V2_KEY,
+  isPlainObject,
+  cloneJson,
+  analyzeLegacyRecords,
+  createV2Envelope,
+  validateV2Envelope
+};
+
+},
+"normalize.js":(module,exports,require)=>{
+'use strict';
+
+function normalizeName(original) {
+  if (typeof original !== 'string') {
+    throw new TypeError('Name must be a string.');
+  }
+
+  let comparisonKey = original
+    .normalize('NFKC')
+    .replace(/\u0640/g, '')
+    .replace(/[أإآٱ]/g, 'ا')
+    .replace(/ى/g, 'ي')
+    .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/[\p{P}\p{S}]+/gu, ' ')
+    .replace(/\s+/gu, ' ')
+    .trim();
+
+  comparisonKey = comparisonKey.replace(/(^|\s)عبد\s+(?=[\u0600-\u06FF])/gu, '$1عبد');
+  return { original, comparisonKey };
+}
+
+const PHONE_PLANS = Object.freeze({
+  EG: Object.freeze({ callingCode: '20', nationalPrefix: '0', minNsnLength: 8, maxNsnLength: 10 }),
+  SA: Object.freeze({ callingCode: '966', nationalPrefix: '0', minNsnLength: 9, maxNsnLength: 9 }),
+  QA: Object.freeze({ callingCode: '974', nationalPrefix: null, minNsnLength: 8, maxNsnLength: 8 })
+});
+
+function toAsciiDigits(value) {
+  return value
+    .replace(/[٠-٩]/g, digit => String(digit.charCodeAt(0) - 0x0660))
+    .replace(/[۰-۹]/g, digit => String(digit.charCodeAt(0) - 0x06f0));
+}
+
+function invalidPhone(original, country, errorCode) {
+  return {
+    original,
+    country,
+    valid: false,
+    errorCode,
+    canonicalE164: null,
+    comparisonKey: null,
+    comparisonDigits: null,
+    comparisonForms: null
+  };
+}
+
+function normalizePhone(original, country) {
+  const countryKey = typeof country === 'string' ? country.toUpperCase() : '';
+  const plan = PHONE_PLANS[countryKey];
+  if (!plan) return invalidPhone(original, countryKey || null, 'UNSUPPORTED_COUNTRY');
+  if (typeof original !== 'string') return invalidPhone(original, countryKey, 'INVALID_TYPE');
+
+  let compact = toAsciiDigits(original.normalize('NFKC'))
+    .replace(/[\s().\-‐‑‒–—]/gu, '');
+  if (!compact) return invalidPhone(original, countryKey, 'INVALID_FORMAT');
+
+  let nationalSignificantNumber;
+  if (compact.startsWith('+')) {
+    if (!/^\+\d+$/.test(compact)) return invalidPhone(original, countryKey, 'INVALID_FORMAT');
+    const internationalDigits = compact.slice(1);
+    if (!internationalDigits.startsWith(plan.callingCode)) {
+      return invalidPhone(original, countryKey, 'COUNTRY_MISMATCH');
+    }
+    nationalSignificantNumber = internationalDigits.slice(plan.callingCode.length);
+  } else if (compact.startsWith('00')) {
+    if (!/^00\d+$/.test(compact)) return invalidPhone(original, countryKey, 'INVALID_FORMAT');
+    const internationalDigits = compact.slice(2);
+    if (!internationalDigits.startsWith(plan.callingCode)) {
+      return invalidPhone(original, countryKey, 'COUNTRY_MISMATCH');
+    }
+    nationalSignificantNumber = internationalDigits.slice(plan.callingCode.length);
+  } else {
+    if (!/^\d+$/.test(compact)) return invalidPhone(original, countryKey, 'INVALID_FORMAT');
+    nationalSignificantNumber = plan.nationalPrefix && compact.startsWith(plan.nationalPrefix)
+      ? compact.slice(plan.nationalPrefix.length)
+      : compact;
+  }
+
+  if (nationalSignificantNumber.length < plan.minNsnLength ||
+      nationalSignificantNumber.length > plan.maxNsnLength) {
+    return invalidPhone(original, countryKey, 'INVALID_LENGTH');
+  }
+
+  const internationalPlus = `+${plan.callingCode}${nationalSignificantNumber}`;
+  const international00 = `00${plan.callingCode}${nationalSignificantNumber}`;
+  const digitsOnly = `${plan.callingCode}${nationalSignificantNumber}`;
+  const national = plan.nationalPrefix
+    ? `${plan.nationalPrefix}${nationalSignificantNumber}`
+    : nationalSignificantNumber;
+
+  return {
+    original,
+    country: countryKey,
+    valid: true,
+    errorCode: null,
+    canonicalE164: internationalPlus,
+    comparisonKey: internationalPlus,
+    comparisonDigits: digitsOnly,
+    comparisonForms: { national, internationalPlus, international00, digitsOnly }
+  };
+}
+
+function normalizeEmail(original) {
+  const comparisonKey = typeof original === 'string'
+    ? original.normalize('NFKC').trim().toLowerCase()
+    : null;
+  return { original, comparisonKey };
+}
+
+function normalizeUsername(original) {
+  let comparisonKey = typeof original === 'string'
+    ? original.normalize('NFKC').trim().toLowerCase()
+    : null;
+  if (comparisonKey && comparisonKey.startsWith('@')) comparisonKey = comparisonKey.slice(1);
+  return { original, comparisonKey };
+}
+
+function normalizeIdentifiers(subject, options = {}) {
+  if (subject === null || typeof subject !== 'object' || Array.isArray(subject)) {
+    throw new TypeError('Subject identifiers must be provided as an object.');
+  }
+
+  const original = { ...subject };
+  const comparison = {};
+  if (Object.hasOwn(subject, 'name')) {
+    comparison.name = typeof subject.name === 'string'
+      ? normalizeName(subject.name)
+      : { original: subject.name, comparisonKey: null };
+  }
+  if (Object.hasOwn(subject, 'phone')) {
+    comparison.phone = normalizePhone(subject.phone, options.country);
+  }
+  if (Object.hasOwn(subject, 'email')) comparison.email = normalizeEmail(subject.email);
+  if (Object.hasOwn(subject, 'username')) comparison.username = normalizeUsername(subject.username);
+
+  const hasPhone = typeof subject.phone === 'string' && subject.phone.trim().length > 0;
+  return {
+    original,
+    comparison,
+    primaryIdentifier: hasPhone ? 'phone' : null
+  };
+}
+
+module.exports = {
+  normalizeName,
+  normalizePhone,
+  normalizeEmail,
+  normalizeUsername,
+  normalizeIdentifiers
+};
+
+},
+"query-engine.js":(module,exports,require)=>{
+'use strict';
+
+const {
+  normalizeName,
+  normalizePhone,
+  normalizeEmail,
+  normalizeUsername
+} = require('./normalize.js');
+
+const LEVELS = Object.freeze(['Primary', 'Expanded', 'Deep']);
+const LEVEL_LIMITS = Object.freeze({ Primary: 15, Expanded: 20, Deep: 25 });
+const STRATEGIES = Object.freeze([
+  'Direct Identifier', 'Exact Identity', 'Focused', 'Professional',
+  'Company', 'Location', 'Social', 'Documents', 'Broad Discovery'
+]);
+const FIELD_ORDER = Object.freeze(['name', 'phone', 'email', 'username', 'company', 'city']);
+
+function hasText(value) {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function cleanFacet(value) {
+  return hasText(value) ? value.normalize('NFKC').trim().replace(/\s+/gu, ' ') : '';
+}
+
+function quote(value) {
+  return `"${value.replace(/"/g, '\\"')}"`;
+}
+
+function queryKey(queryText) {
+  return queryText.normalize('NFKC').trim().replace(/\s+/gu, ' ').toLowerCase();
+}
+
+// Priority is an execution-order hint only, never an identity-confidence value.
+function makeQuery(level, strategy, category, priority, identifiersUsed, queryText) {
+  return {
+    strategy,
+    level,
+    category,
+    priority,
+    identifiersUsed: FIELD_ORDER.filter(field => identifiersUsed.includes(field)),
+    queryText
+  };
+}
+
+function addPhraseQuery(target, level, strategy, category, priority, fields, phrases) {
+  const cleanPhrases = phrases.map(cleanFacet).filter(Boolean);
+  if (!cleanPhrases.length) return;
+  target.push(makeQuery(level, strategy, category, priority, fields,
+    cleanPhrases.map(quote).join(' ')));
+}
+
+function getNameVariants(value) {
+  if (!hasText(value)) return [];
+  const original = cleanFacet(value);
+  const normalized = normalizeName(value).comparisonKey;
+  const variants = [original];
+  if (hasText(normalized) && queryKey(quote(normalized)) !== queryKey(quote(original))) {
+    variants.push(normalized);
+  }
+  return variants.slice(0, 2);
+}
+
+function getRequestedLevels(options) {
+  if (options.requestedLevels === undefined) return ['Primary'];
+  if (!Array.isArray(options.requestedLevels)) {
+    throw new TypeError('requestedLevels must be an array.');
+  }
+  if (options.requestedLevels.some(level => !LEVELS.includes(level))) {
+    throw new TypeError('Requested levels must be Primary, Expanded, or Deep.');
+  }
+  const requested = new Set(options.requestedLevels);
+  return LEVELS.filter(level => level === 'Primary' || requested.has(level));
+}
+
+function buildPrimaryQueries(input) {
+  const queries = [];
+  const { nameVariants, phone, email, username, company, city } = input;
+  const name = nameVariants[0] || '';
+
+  if (phone) {
+    const forms = phone.comparisonForms;
+    for (const [form, priority] of [
+      ['internationalPlus', 100], ['national', 99],
+      ['international00', 98], ['digitsOnly', 97]
+    ]) {
+      if (hasText(forms[form])) {
+        addPhraseQuery(queries, 'Primary', 'Direct Identifier', 'identifier', priority,
+          ['phone'], [forms[form]]);
+      }
+    }
+  }
+  if (email) {
+    addPhraseQuery(queries, 'Primary', 'Direct Identifier', 'identifier', 96,
+      ['email'], [email.comparisonKey]);
+  }
+  if (username) {
+    for (const [index, variant] of username.searchVariants.entries()) {
+      addPhraseQuery(queries, 'Primary', 'Direct Identifier', 'identifier', 95 - index,
+        ['username'], [variant]);
+    }
+  }
+  for (const [index, variant] of nameVariants.entries()) {
+    addPhraseQuery(queries, 'Primary', 'Exact Identity', 'identity', 90 - index,
+      ['name'], [variant]);
+  }
+  if (!name) return queries;
+
+  if (phone) {
+    addPhraseQuery(queries, 'Primary', 'Focused', 'identity', 89,
+      ['name', 'phone'], [name, phone.comparisonForms.internationalPlus]);
+  }
+  if (email) {
+    addPhraseQuery(queries, 'Primary', 'Focused', 'identity', 88,
+      ['name', 'email'], [name, email.comparisonKey]);
+  }
+  if (username) {
+    addPhraseQuery(queries, 'Primary', 'Focused', 'identity', 87,
+      ['name', 'username'], [name, username.comparisonKey]);
+  }
+  if (company) {
+    addPhraseQuery(queries, 'Primary', 'Company', 'company', 86,
+      ['name', 'company'], [name, company]);
+  }
+  if (city) {
+    addPhraseQuery(queries, 'Primary', 'Location', 'location', 83,
+      ['name', 'city'], [name, city]);
+  }
+  addPhraseQuery(queries, 'Primary', 'Professional', 'professional', 75,
+    ['name'], [name, 'professional profile']);
+  addPhraseQuery(queries, 'Primary', 'Social', 'social', 70,
+    ['name'], [name, 'social profile']);
+  addPhraseQuery(queries, 'Primary', 'Documents', 'documents', 65,
+    ['name'], [name, 'public document']);
+  queries.push(makeQuery('Primary', 'Broad Discovery', 'discovery', 60,
+    ['name'], name));
+  return queries;
+}
+
+function buildExpandedQueries(input) {
+  const queries = [];
+  const { nameVariants, phone, username, company, city } = input;
+  for (const name of nameVariants) {
+    const generic = [
+      ['Professional', 'professional', 70, 'work history'],
+      ['Professional', 'professional', 69, 'career'],
+      ['Professional', 'professional', 68, 'job title'],
+      ['Social', 'social', 67, 'public profile'],
+      ['Social', 'social', 66, 'online profile'],
+      ['Social', 'social', 65, 'social account'],
+      ['Documents', 'documents', 64, 'public records'],
+      ['Documents', 'documents', 63, 'PDF'],
+      ['Documents', 'documents', 62, 'publication'],
+      ['Broad Discovery', 'discovery', 61, 'biography'],
+      ['Broad Discovery', 'discovery', 60, 'interview'],
+      ['Broad Discovery', 'discovery', 59, 'news'],
+      ['Broad Discovery', 'discovery', 58, 'contact'],
+      ['Broad Discovery', 'discovery', 57, 'article'],
+      ['Broad Discovery', 'discovery', 56, 'event']
+    ];
+    for (const [strategy, category, priority, context] of generic) {
+      addPhraseQuery(queries, 'Expanded', strategy, category, priority,
+        ['name'], [name, context]);
+    }
+    if (company) {
+      for (const [index, context] of [
+        'team', 'leadership', 'staff', 'employee directory',
+        'business profile', 'careers', 'organization', 'company news'
+      ].entries()) {
+        addPhraseQuery(queries, 'Expanded', 'Company', 'company', 55 - index,
+          ['name', 'company'], [name, company, context]);
+      }
+    }
+    if (city) {
+      for (const [index, context] of [
+        'local business', 'city news', 'community', 'event',
+        'organization', 'city profile', 'local directory', 'public listing'
+      ].entries()) {
+        addPhraseQuery(queries, 'Expanded', 'Location', 'location', 47 - index,
+          ['name', 'city'], [name, city, context]);
+      }
+    }
+    if (phone) {
+      for (const [index, form] of [
+        'national', 'international00', 'digitsOnly'
+      ].entries()) {
+        addPhraseQuery(queries, 'Expanded', 'Focused', 'identity', 39 - index,
+          ['name', 'phone'], [name, phone.comparisonForms[form]]);
+      }
+    }
+    if (username) {
+      for (const variant of username.searchVariants) {
+        addPhraseQuery(queries, 'Expanded', 'Social', 'social', 35,
+          ['name', 'username'], [name, variant, 'profile']);
+      }
+    }
+  }
+  return queries;
+}
+
+function buildDeepQueries(input) {
+  const queries = [];
+  const { nameVariants, phone, email, username, company, city } = input;
+  for (const name of nameVariants) {
+    const deepContexts = [
+      ['Documents', 'documents', 55, 'public reference'],
+      ['Documents', 'documents', 54, 'publication record'],
+      ['Documents', 'documents', 53, 'public listing'],
+      ['Professional', 'professional', 52, 'work history'],
+      ['Professional', 'professional', 51, 'professional biography'],
+      ['Professional', 'professional', 50, 'career history'],
+      ['Social', 'social', 49, 'directory profile'],
+      ['Social', 'social', 48, 'public profile'],
+      ['Broad Discovery', 'discovery', 47, 'interview archive'],
+      ['Broad Discovery', 'discovery', 46, 'news archive'],
+      ['Broad Discovery', 'discovery', 45, 'conference'],
+      ['Broad Discovery', 'discovery', 44, 'presentation'],
+      ['Broad Discovery', 'discovery', 43, 'organization'],
+      ['Broad Discovery', 'discovery', 42, 'contact directory'],
+      ['Broad Discovery', 'discovery', 41, 'civic record']
+    ];
+    for (const [strategy, category, priority, context] of deepContexts) {
+      addPhraseQuery(queries, 'Deep', strategy, category, priority,
+        ['name'], [name, context]);
+    }
+    if (company) {
+      for (const [index, context] of [
+        'team member', 'leadership', 'product', 'announcement',
+        'professional profile', 'organization', 'press', 'contact'
+      ].entries()) {
+        addPhraseQuery(queries, 'Deep', 'Company', 'company', 40 - index,
+          ['name', 'company'], [name, company, context]);
+      }
+    }
+    if (city) {
+      for (const [index, context] of [
+        'local profile', 'business', 'news', 'event',
+        'organization', 'community', 'directory', 'public record'
+      ].entries()) {
+        addPhraseQuery(queries, 'Deep', 'Location', 'location', 32 - index,
+          ['name', 'city'], [name, city, context]);
+      }
+    }
+    if (company && city) {
+      for (const [index, context] of [
+        '', 'team', 'professional profile', 'community', 'news', 'public record'
+      ].entries()) {
+        addPhraseQuery(queries, 'Deep', 'Focused', 'identity', 24 - index,
+          ['name', 'company', 'city'], [name, company, city, context]);
+      }
+    }
+    if (phone && company) {
+      for (const form of ['national', 'international00', 'digitsOnly']) {
+        addPhraseQuery(queries, 'Deep', 'Focused', 'identity', 17,
+          ['name', 'phone', 'company'], [name, phone.comparisonForms[form], company]);
+      }
+    }
+    if (phone && city) {
+      addPhraseQuery(queries, 'Deep', 'Focused', 'identity', 16,
+        ['name', 'phone', 'city'], [name, phone.comparisonForms.internationalPlus, city]);
+    }
+    if (email && company) {
+      addPhraseQuery(queries, 'Deep', 'Company', 'company', 15,
+        ['name', 'email', 'company'], [name, email.comparisonKey, company]);
+    }
+    if (username && company) {
+      addPhraseQuery(queries, 'Deep', 'Social', 'social', 14,
+        ['name', 'username', 'company'], [name, username.comparisonKey, company]);
+    }
+    if (username && city) {
+      addPhraseQuery(queries, 'Deep', 'Social', 'social', 13,
+        ['name', 'username', 'city'], [name, username.comparisonKey, city]);
+    }
+  }
+  return queries;
+}
+
+function buildQueryPlan(subject, options = {}) {
+  if (subject === null || typeof subject !== 'object' || Array.isArray(subject)) {
+    throw new TypeError('Subject must be an object.');
+  }
+  if (options === null || typeof options !== 'object' || Array.isArray(options)) {
+    throw new TypeError('Options must be an object.');
+  }
+
+  const requestedLevels = getRequestedLevels(options);
+  const warnings = [];
+  const country = options.country || subject.country;
+  const input = {
+    nameVariants: getNameVariants(subject.name),
+    phone: null,
+    email: null,
+    username: null,
+    company: cleanFacet(subject.company),
+    city: cleanFacet(subject.city)
+  };
+  if (hasText(subject.phone)) {
+    const normalized = normalizePhone(subject.phone, country);
+    if (normalized.valid) input.phone = normalized;
+    else warnings.push({ code: normalized.errorCode || 'PHONE_INVALID', identifier: 'phone' });
+  }
+  if (hasText(subject.email)) {
+    const normalized = normalizeEmail(subject.email);
+    if (hasText(normalized.comparisonKey)) input.email = normalized;
+  }
+  if (hasText(subject.username)) {
+    const normalized = normalizeUsername(subject.username);
+    if (hasText(normalized.comparisonKey)) {
+      const original = cleanFacet(subject.username);
+      const searchVariants = [original, normalized.comparisonKey]
+        .filter((variant, index, all) => all.findIndex(value => queryKey(quote(value)) === queryKey(quote(variant))) === index)
+        .slice(0, 2);
+      input.username = { ...normalized, searchVariants };
+    }
+  }
+
+  const proposalsByLevel = {
+    Primary: buildPrimaryQueries(input),
+    Expanded: requestedLevels.includes('Expanded') ? buildExpandedQueries(input) : [],
+    Deep: requestedLevels.includes('Deep') ? buildDeepQueries(input) : []
+  };
+  const queries = [];
+  const countsByLevel = { Primary: 0, Expanded: 0, Deep: 0 };
+  const deferredCountsByLevel = { Primary: 0, Expanded: 0, Deep: 0 };
+  const deduplicatedCountsByLevel = { Primary: 0, Expanded: 0, Deep: 0 };
+  const seen = new Set();
+  let deduplicatedCount = 0;
+
+  for (const level of requestedLevels) {
+    const uniqueLevel = [];
+    const proposals = proposalsByLevel[level]
+      .map((query, index) => ({ query, index }))
+      .sort((left, right) => right.query.priority - left.query.priority || left.index - right.index);
+    for (const { query } of proposals) {
+      const key = queryKey(query.queryText);
+      if (seen.has(key)) {
+        deduplicatedCount += 1;
+        deduplicatedCountsByLevel[level] += 1;
+        continue;
+      }
+      seen.add(key);
+      uniqueLevel.push(query);
+    }
+    const selected = uniqueLevel.slice(0, LEVEL_LIMITS[level]);
+    countsByLevel[level] = selected.length;
+    deferredCountsByLevel[level] = Math.max(0, uniqueLevel.length - selected.length);
+    queries.push(...selected);
+  }
+
+  return {
+    requestedLevels,
+    queries,
+    countsByLevel,
+    deferredCountsByLevel,
+    deduplicatedCountsByLevel,
+    deduplicatedCount,
+    limits: LEVEL_LIMITS,
+    warnings
+  };
+}
+
+module.exports = { buildQueryPlan, LEVELS, LEVEL_LIMITS, STRATEGIES };
+
+},
+"records.js":(module,exports,require)=>{
+'use strict';
+
+const CANDIDATE_FIELDS = Object.freeze([
+  'name', 'phone', 'email', 'username', 'company', 'city', 'country'
+]);
+const IDENTITY_FIELDS = Object.freeze(['name', 'phone', 'email', 'username']);
+
+function isPlainObject(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null;
+}
+
+function makeCandidateId() {
+  if (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function') {
+    return `candidate-${globalThis.crypto.randomUUID()}`;
+  }
+  return `candidate-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+function resolveTimestamp(nowOption) {
+  const value = typeof nowOption === 'function' ? nowOption() : nowOption;
+  const date = value === undefined ? new Date() : new Date(value);
+  if (Number.isNaN(date.getTime())) throw new TypeError('Candidate timestamp must be a valid date.');
+  return date.toISOString();
+}
+
+function addCandidateToCase(caseRecord, candidateInput, options = {}) {
+  if (!isPlainObject(caseRecord)) throw new TypeError('Case record must be an object.');
+  if (!isPlainObject(candidateInput)) throw new TypeError('Candidate must be an object.');
+  if (!Array.isArray(caseRecord.candidates ?? [])) throw new TypeError('Case candidates must be an array.');
+
+  const candidate = {};
+  for (const field of CANDIDATE_FIELDS) {
+    if (!Object.hasOwn(candidateInput, field)) continue;
+    if (typeof candidateInput[field] !== 'string') {
+      throw new TypeError(`Candidate ${field} must be a string when provided.`);
+    }
+    candidate[field] = candidateInput[field];
+  }
+  if (!IDENTITY_FIELDS.some(field => typeof candidate[field] === 'string' && candidate[field].trim())) {
+    throw new TypeError('Candidate needs at least one identifier: name, phone, email, or username.');
+  }
+
+  const id = options.id ?? makeCandidateId();
+  if (typeof id !== 'string' || !id.trim()) throw new TypeError('Candidate id must be a non-empty string.');
+  const existing = caseRecord.candidates ?? [];
+  if (existing.some(item => item && item.id === id)) throw new Error(`Candidate id already exists: ${id}`);
+  const timestamp = resolveTimestamp(options.now);
+  const savedCandidate = { id, createdAt: timestamp, updatedAt: timestamp, ...candidate };
+  return { ...caseRecord, candidates: [...existing, savedCandidate] };
+}
+
+function rejectCandidate(caseRecord, candidateId, options = {}) {
+  if (!isPlainObject(caseRecord) || !Array.isArray(caseRecord.candidates)) {
+    throw new TypeError('Case record must contain a candidates array.');
+  }
+  if (options.reason !== undefined && typeof options.reason !== 'string') {
+    throw new TypeError('Candidate rejection reason must be a string when provided.');
+  }
+  const candidateIndex = caseRecord.candidates.findIndex(candidate => candidate && candidate.id === candidateId);
+  if (candidateIndex < 0) throw new Error(`Candidate not found: ${candidateId}`);
+  const existing = caseRecord.candidates[candidateIndex];
+  if (existing.status === 'Rejected') {
+    return { caseRecord, updated: false, candidateId };
+  }
+  const timestamp = resolveTimestamp(options.now);
+  const rejected = {
+    ...existing,
+    status: 'Rejected',
+    rejectedAt: timestamp,
+    updatedAt: timestamp,
+    ...(options.reason !== undefined ? { rejectionReason: options.reason } : {})
+  };
+  const candidates = caseRecord.candidates.map((candidate, index) => index === candidateIndex ? rejected : candidate);
+  return { caseRecord: { ...caseRecord, candidates }, updated: true, candidateId };
+}
+
+module.exports = { CANDIDATE_FIELDS, IDENTITY_FIELDS, addCandidateToCase, rejectCandidate };
+
+},
+"search-engines.js":(module,exports,require)=>{
+'use strict';
+
+const ENGINE_DEFINITIONS = Object.freeze([
+  Object.freeze({
+    name: 'Google',
+    buildURL(queryText) {
+      return `https://www.google.com/search?q=${encodeURIComponent(queryText)}`;
+    },
+    capabilities: Object.freeze({ operators: Object.freeze({
+      site: Object.freeze({ supportLevel: 'Supported', status: 'verified', reliability: 'verified', note: 'Supported operator; live test returned results from example.com.' }),
+      filetype: Object.freeze({ supportLevel: 'Supported', status: 'verified', reliability: 'verified', note: 'Supported operator; live test returned W3C PDF results.' })
+    }) })
+  }),
+  Object.freeze({
+    name: 'Bing',
+    buildURL(queryText) {
+      return `https://www.bing.com/search?q=${encodeURIComponent(queryText)}`;
+    },
+    capabilities: Object.freeze({ operators: Object.freeze({
+      site: Object.freeze({ supportLevel: 'Best Effort', status: 'observed-result-mismatch', reliability: 'unverified-for-test-query', note: 'Best effort only; this live site:example.com test returned unrelated domains. Never guarantee filtering; manually verify results.' }),
+      filetype: Object.freeze({ supportLevel: 'Best Effort', status: 'live-check-blocked', reliability: 'access-blocked', note: 'Best effort only; browser verification challenge prevented confirmation. Never guarantee filtered results.' })
+    }) })
+  }),
+  Object.freeze({
+    name: 'DuckDuckGo',
+    buildURL(queryText) {
+      return `https://duckduckgo.com/?q=${encodeURIComponent(queryText)}`;
+    },
+    capabilities: Object.freeze({ operators: Object.freeze({
+      site: Object.freeze({ supportLevel: 'Supported / Best Effort', status: 'verified-with-caveat', reliability: 'verified-with-caveat', note: 'Verified on the test query; advanced syntax can return related results when exact matches are limited.' }),
+      filetype: Object.freeze({ supportLevel: 'Supported / Best Effort', status: 'verified-with-caveat', reliability: 'verified-with-caveat', note: 'Verified for PDF in the test query; advanced syntax can return related results when exact matches are limited.' })
+    }) })
+  }),
+  Object.freeze({
+    name: 'Brave',
+    buildURL(queryText) {
+      return `https://search.brave.com/search?q=${encodeURIComponent(queryText)}`;
+    },
+    capabilities: Object.freeze({ operators: Object.freeze({
+      site: Object.freeze({ supportLevel: 'Experimental / Best Effort', status: 'live-check-blocked', reliability: 'access-blocked', note: 'Experimental operator; live test was blocked by anti-bot verification. Results are not guaranteed.' }),
+      filetype: Object.freeze({ supportLevel: 'Experimental / Best Effort', status: 'live-check-blocked', reliability: 'access-blocked', note: 'Experimental operator; live test was blocked by anti-bot verification. Results are not guaranteed.' })
+    }) })
+  })
+]);
+
+const SEARCH_ENGINES = Object.freeze(ENGINE_DEFINITIONS.map(engine => engine.name));
+const ENGINES_BY_NAME = new Map(ENGINE_DEFINITIONS.map(engine => [engine.name, engine]));
+
+function normalizedQueryKey(queryText) {
+  return queryText.normalize('NFKC').trim().replace(/\s+/gu, ' ').toLowerCase();
+}
+
+function getOperatorSupport(engineName) {
+  const engine = ENGINES_BY_NAME.get(engineName);
+  if (!engine) throw new TypeError(`Unknown search engine: ${engineName}`);
+  return engine.capabilities.operators;
+}
+
+function buildEngineSearches(plan, selectedEngines = SEARCH_ENGINES) {
+  if (!plan || typeof plan !== 'object' || !Array.isArray(plan.queries)) {
+    throw new TypeError('Query plan must contain a queries array.');
+  }
+  if (!Array.isArray(selectedEngines) || selectedEngines.length === 0) {
+    throw new TypeError('At least one search engine must be selected.');
+  }
+  const engines = [];
+  const selected = new Set();
+  for (const name of selectedEngines) {
+    const engine = ENGINES_BY_NAME.get(name);
+    if (!engine) throw new TypeError(`Unknown search engine: ${name}`);
+    if (!selected.has(name)) {
+      selected.add(name);
+      engines.push(engine);
+    }
+  }
+
+  const proposals = plan.queries.map((query, index) => {
+    if (!query || typeof query.queryText !== 'string' || !query.queryText.trim()) {
+      throw new TypeError('Every logical query must have non-empty queryText.');
+    }
+    return { query, index };
+  }).sort((a, b) => (b.query.priority || 0) - (a.query.priority || 0) || a.index - b.index);
+
+  const searches = [];
+  for (const engine of engines) {
+    const seen = new Set();
+    for (const { query } of proposals) {
+      const key = normalizedQueryKey(query.queryText);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      searches.push({
+        searchEngine: engine.name,
+        strategy: query.strategy,
+        level: query.level,
+        category: query.category,
+        priority: query.priority,
+        identifiersUsed: [...query.identifiersUsed],
+        queryText: query.queryText,
+        url: engine.buildURL(query.queryText)
+      });
+    }
+  }
+  return searches;
+}
+
+module.exports = { SEARCH_ENGINES, buildEngineSearches, getOperatorSupport };
+
+},
+"storage.js":(module,exports,require)=>{
+'use strict';
+
+const {
+  V1_KEY, V2_KEY, analyzeLegacyRecords, createV2Envelope, validateV2Envelope
+} = require('./model.js');
+const { validateBackup } = require('./backup.js');
+
+function blocked(code, message, counts = {}) {
+  return {
+    success: false, status: 'blocked', code, message,
+    v1Records: counts.v1Records ?? null, v2Records: counts.v2Records ?? 0,
+    warnings: counts.warnings ?? []
+  };
+}
+
+function canonical(value) {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map(key => `${JSON.stringify(key)}:${canonical(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function parseV1(raw) {
+  if (raw === null) return { ok: true, records: [], present: false };
+  let records;
+  try {
+    records = JSON.parse(raw);
+  } catch (_) {
+    return { ok: false, code: 'CORRUPT_V1_JSON', message: 'V1 contains malformed JSON.' };
+  }
+  const checked = analyzeLegacyRecords(records);
+  if (!checked.valid) {
+    return { ok: false, code: 'INVALID_V1_SHAPE', message: checked.errors.join(' ') };
+  }
+  return { ok: true, records, present: true, warnings: checked.warnings };
+}
+
+function sameSource(backup, present, records) {
+  return backup.storageKeyPresent === present &&
+    backup.recordCount === records.length &&
+    canonical(backup.records) === canonical(records);
+}
+
+function migrateV1ToV2(storage, backup, options = {}) {
+  if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' ||
+      typeof storage.removeItem !== 'function') {
+    return blocked('INVALID_STORAGE', 'Storage adapter is incomplete.');
+  }
+  const backupValidation = validateBackup(backup);
+  if (!backupValidation.valid) {
+    return blocked('INVALID_BACKUP', 'Migration stopped because the V1 backup is invalid.', { warnings: backupValidation.errors });
+  }
+
+  let v1Before;
+  let v2Before;
+  try {
+    v1Before = storage.getItem(V1_KEY);
+    v2Before = storage.getItem(V2_KEY);
+  } catch (_) {
+    return blocked('STORAGE_READ_FAILED', 'Could not read staging storage safely.');
+  }
+  const parsedV1 = parseV1(v1Before);
+  if (!parsedV1.ok) return blocked(parsedV1.code, parsedV1.message);
+  if (!sameSource(backup, parsedV1.present, parsedV1.records)) {
+    return blocked('BACKUP_SOURCE_MISMATCH', 'The backup does not match the current V1 source; nothing was written.', {
+      v1Records: parsedV1.records.length
+    });
+  }
+
+  if (v2Before !== null) {
+    let existing;
+    try { existing = JSON.parse(v2Before); } catch (_) {
+      return blocked('CORRUPT_V2_EXISTS', 'Existing V2 is unreadable and was not overwritten.', { v1Records: parsedV1.records.length });
+    }
+    const checked = validateV2Envelope(existing);
+    const matches = checked.valid &&
+      existing.source.storageKeyPresent === parsedV1.present &&
+      existing.cases.length === parsedV1.records.length &&
+      existing.cases.every((item, index) => canonical(item.legacyRecord) === canonical(parsedV1.records[index]));
+    if (!matches) return blocked('V2_CONFLICT', 'Existing V2 does not match this source and was not overwritten.', { v1Records: parsedV1.records.length });
+    return {
+      success: true, status: 'already-migrated', v1Records: parsedV1.records.length,
+      v2Records: existing.cases.length, warnings: existing.warnings || [], envelope: existing
+    };
+  }
+
+  let envelope;
+  try {
+    const migratedAt = typeof options.now === 'function' ? options.now() : new Date().toISOString();
+    envelope = createV2Envelope(parsedV1.records, {
+      migratedAt, storageKeyPresent: parsedV1.present
+    });
+  } catch (error) {
+    return blocked(error.code || 'MODEL_BUILD_FAILED', error.message, { v1Records: parsedV1.records.length });
+  }
+  const serialized = JSON.stringify(envelope);
+  try {
+    storage.setItem(V2_KEY, serialized);
+    const readBackRaw = storage.getItem(V2_KEY);
+    const readBack = readBackRaw === null ? null : JSON.parse(readBackRaw);
+    const checked = validateV2Envelope(readBack);
+    const recordsMatch = checked.valid && readBack.cases.length === parsedV1.records.length &&
+      readBack.cases.every((item, index) => canonical(item.legacyRecord) === canonical(parsedV1.records[index]));
+    if (!recordsMatch || storage.getItem(V1_KEY) !== v1Before) {
+      throw new Error('V2 read-back or V1 preservation check failed.');
+    }
+    return {
+      success: true, status: 'migrated', v1Records: parsedV1.records.length,
+      v2Records: readBack.cases.length, warnings: readBack.warnings || [], envelope: readBack
+    };
+  } catch (_) {
+    let rollbackSucceeded = false;
+    try {
+      if (v2Before === null) storage.removeItem(V2_KEY);
+      else storage.setItem(V2_KEY, v2Before);
+      rollbackSucceeded = storage.getItem(V2_KEY) === v2Before && storage.getItem(V1_KEY) === v1Before;
+    } catch (_) {
+      rollbackSucceeded = false;
+    }
+    return {
+      ...blocked('V2_WRITE_OR_VERIFY_FAILED', 'V2 write/read-back failed; V1 remains the recovery source.', {
+        v1Records: parsedV1.records.length, warnings: envelope.warnings
+      }),
+      rollbackSucceeded,
+      v1Unchanged: safeGet(storage, V1_KEY) === v1Before
+    };
+  }
+}
+
+function safeGet(storage, key) {
+  try { return storage.getItem(key); } catch (_) { return Symbol('read-failed'); }
+}
+
+module.exports = { V1_KEY, V2_KEY, migrateV1ToV2 };
+
+},
+"workspace.js":(module,exports,require)=>{
+'use strict';
+
+const WORKSPACE_KEY = 'totaDiscovery.workspace.v2';
+const WORKSPACE_SCHEMA_VERSION = 2;
+const LEVELS = ['Primary', 'Expanded', 'Deep'];
+const ENGINES = ['Google', 'Bing', 'DuckDuckGo', 'Brave'];
+function clone(value) { return JSON.parse(JSON.stringify(value)); }
+function isObject(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
+function makeId(cryptoProvider) { const crypto = cryptoProvider || globalThis.crypto; return typeof crypto?.randomUUID === 'function' ? `case-${crypto.randomUUID()}` : `case-${Date.now()}-${Math.random().toString(36).slice(2)}`; }
+function createCaseRecord(subject, options = {}) {
+  if (!isObject(subject)) throw new TypeError('Case subject must be an object.');
+  if (!['name', 'phone', 'email', 'username'].some(field => typeof subject[field] === 'string' && subject[field].trim())) throw new TypeError('Case needs a name, phone, email, or username.');
+  const now = options.now ?? new Date().toISOString();
+  if (typeof now !== 'string' || Number.isNaN(Date.parse(now))) throw new TypeError('Case timestamp is invalid.');
+  const id = options.id ?? makeId(options.crypto);
+  if (typeof id !== 'string' || !id.trim()) throw new TypeError('Case ID must be a non-empty string.');
+  return { schemaVersion: 2, id, createdAt: now, updatedAt: now, subject: clone(subject), selectedLevels: ['Primary'], selectedEngines: [...ENGINES], queries: [], candidates: [], notes: '' };
+}
+function validateCase(record, index, errors) {
+  if (!isObject(record)) { errors.push(`Case ${index} must be an object.`); return; }
+  if (record.schemaVersion !== 2) errors.push(`Case ${index} has unsupported schemaVersion.`);
+  if (typeof record.id !== 'string' || !record.id.trim()) errors.push(`Case ${index} has no id.`);
+  if (!isObject(record.subject)) errors.push(`Case ${index} subject must be an object.`);
+  if (!Array.isArray(record.queries)) errors.push(`Case ${index} queries must be an array.`);
+  if (!Array.isArray(record.candidates)) errors.push(`Case ${index} candidates must be an array.`);
+  if (!Array.isArray(record.selectedLevels) || record.selectedLevels.some(level => !LEVELS.includes(level))) errors.push(`Case ${index} selectedLevels is invalid.`);
+  if (!Array.isArray(record.selectedEngines) || record.selectedEngines.some(engine => !ENGINES.includes(engine))) errors.push(`Case ${index} selectedEngines is invalid.`);
+  for (const field of ['createdAt', 'updatedAt']) if (typeof record[field] !== 'string' || Number.isNaN(Date.parse(record[field]))) errors.push(`Case ${index} ${field} is invalid.`);
+}
+function validateWorkspace(workspace) {
+  const errors = [];
+  if (!isObject(workspace)) return { valid: false, errors: ['Workspace must be an object.'] };
+  if (workspace.schemaVersion !== 2) errors.push('Unsupported workspace schemaVersion.');
+  if (!Array.isArray(workspace.cases)) errors.push('Workspace cases must be an array.');
+  const ids = new Set();
+  for (const [index, record] of (Array.isArray(workspace.cases) ? workspace.cases : []).entries()) {
+    validateCase(record, index, errors);
+    if (typeof record?.id === 'string') { if (ids.has(record.id)) errors.push(`Duplicate case ID: ${record.id}.`); ids.add(record.id); }
+  }
+  if (workspace.activeCaseId !== null && !ids.has(workspace.activeCaseId)) errors.push('activeCaseId must refer to a case or be null.');
+  return { valid: errors.length === 0, errors };
+}
+function emptyWorkspace() { return { schemaVersion: 2, activeCaseId: null, cases: [] }; }
+function loadWorkspace(storage) {
+  if (!storage || typeof storage.getItem !== 'function') { const error = new TypeError('Readable storage is required.'); error.code = 'INVALID_STORAGE'; throw error; }
+  let raw;
+  try { raw = storage.getItem(WORKSPACE_KEY); } catch (cause) { const error = new Error('Workspace storage is unavailable.'); error.code = 'STORAGE_READ_FAILED'; error.cause = cause; throw error; }
+  if (raw === null) return emptyWorkspace();
+  let workspace;
+  try { workspace = JSON.parse(raw); } catch (cause) { const error = new Error('Saved workspace JSON is corrupt.'); error.code = 'CORRUPT_WORKSPACE'; error.cause = cause; throw error; }
+  const checked = validateWorkspace(workspace);
+  if (!checked.valid) { const error = new Error(checked.errors.join(' ')); error.code = 'INVALID_WORKSPACE'; error.errors = checked.errors; throw error; }
+  return workspace;
+}
+function saveWorkspace(storage, workspace) {
+  const checked = validateWorkspace(workspace);
+  if (!checked.valid) return { success: false, code: 'INVALID_WORKSPACE', errors: checked.errors };
+  if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function') return { success: false, code: 'INVALID_STORAGE' };
+  const serialized = JSON.stringify(workspace);
+  try { storage.setItem(WORKSPACE_KEY, serialized); if (storage.getItem(WORKSPACE_KEY) !== serialized) throw new Error('Workspace read-back differs.'); return { success: true, recordCount: workspace.cases.length }; }
+  catch { return { success: false, code: 'STORAGE_WRITE_OR_VERIFY_FAILED' }; }
+}
+function createWorkspaceBackup(workspace, options = {}) {
+  const checked = validateWorkspace(workspace);
+  if (!checked.valid) { const error = new TypeError(checked.errors.join(' ')); error.code = 'INVALID_WORKSPACE'; throw error; }
+  const exportedAt = options.now ?? new Date().toISOString();
+  if (typeof exportedAt !== 'string' || Number.isNaN(Date.parse(exportedAt))) throw new TypeError('Backup timestamp is invalid.');
+  return { backupVersion: 2, schemaVersion: 2, exportedAt, recordCount: workspace.cases.length, workspace: clone(workspace) };
+}
+function validateWorkspaceBackup(backup) {
+  if (!isObject(backup)) return { valid: false, errors: ['Backup must be an object.'] };
+  const errors = [];
+  if (backup.backupVersion !== 2) errors.push('Unsupported backupVersion.');
+  if (backup.schemaVersion !== 2) errors.push('Unsupported backup schemaVersion.');
+  if (typeof backup.exportedAt !== 'string' || Number.isNaN(Date.parse(backup.exportedAt))) errors.push('Backup exportedAt is invalid.');
+  if (!Number.isInteger(backup.recordCount) || !Array.isArray(backup.workspace?.cases) || backup.recordCount !== backup.workspace.cases.length) errors.push('Backup recordCount does not match its cases.');
+  const validation = validateWorkspace(backup.workspace);
+  if (!validation.valid) errors.push(...validation.errors);
+  return { valid: errors.length === 0, errors };
+}
+function restoreWorkspace(storage, backup, options = {}) {
+  const checked = validateWorkspaceBackup(backup);
+  if (!checked.valid) return { success: false, code: 'INVALID_BACKUP', errors: checked.errors };
+  if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' || typeof storage.removeItem !== 'function') return { success: false, code: 'INVALID_STORAGE' };
+  let before;
+  try { before = storage.getItem(WORKSPACE_KEY); } catch { return { success: false, code: 'STORAGE_READ_FAILED' }; }
+  const serialized = JSON.stringify(backup.workspace);
+  if (before === serialized) return { success: true, status: 'already-restored', recordCount: backup.recordCount };
+  if (before !== null && options.allowOverwrite !== true) return { success: false, code: 'RESTORE_TARGET_NOT_EMPTY' };
+  try { storage.setItem(WORKSPACE_KEY, serialized); if (storage.getItem(WORKSPACE_KEY) !== serialized) throw new Error('Restore read-back differs.'); return { success: true, status: 'restored', recordCount: backup.recordCount }; }
+  catch {
+    let rollbackSucceeded = false;
+    try { if (before === null) storage.removeItem(WORKSPACE_KEY); else storage.setItem(WORKSPACE_KEY, before); rollbackSucceeded = storage.getItem(WORKSPACE_KEY) === before; } catch { rollbackSucceeded = false; }
+    return { success: false, code: 'RESTORE_FAILED', rollbackSucceeded };
+  }
+}
+module.exports = { WORKSPACE_KEY, WORKSPACE_SCHEMA_VERSION, LEVELS, ENGINES, createCaseRecord, validateWorkspace, emptyWorkspace, loadWorkspace, saveWorkspace, createWorkspaceBackup, validateWorkspaceBackup, restoreWorkspace };
+
+}};
+const cache=Object.create(null);
+function load(request){const name=String(request).split('/').pop();if(cache[name])return cache[name].exports;if(!factories[name])throw new Error('Bundled module not found: '+name);const module={exports:{}};cache[name]=module;factories[name](module,module.exports,load);return module.exports;}
+const api={};for(const name of Object.keys(factories))api[name]=load(name);window.TotaV2Modules=api;
 })();
+</script>
+<script>
+'use strict';
+(() => {
+  const M=window.TotaV2Modules; if(!M){document.getElementById('loginError').textContent='تعذر تحميل وحدات التطبيق.';return;}
+  const {buildQueryPlan}=M['query-engine.js'],{buildEngineSearches,SEARCH_ENGINES}=M['search-engines.js'];
+  const {matchCandidate}=M['matching.js'],{addCandidateToCase,rejectCandidate}=M['records.js'];
+  const {addEvidenceToCandidate,setEvidenceStatus,recordCandidateDiscovery,findPossibleCandidateDuplicates}=M['evidence.js'];
+  const {computeSearchCoverage,setSearchReviewStatus}=M['coverage.js'];
+  const {verifyLicenseLogin}=M['licensing.js'];
+  const W=M['workspace.js'],LICENSES_URL='https://mahmoud2281967.github.io/tota-discovery/licenses.json';
+  const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const st={workspace:{schemaVersion:2,activeCaseId:null,cases:[]},storage:null,user:null,tab:'dashboard'};
+  const LEVEL_AR={Primary:'أساسي',Expanded:'موسع',Deep:'متعمق'};
+  const STATUS_AR={'Needs Review':'يحتاج مراجعة',Probable:'مرجح',Confirmed:'مؤكد',Rejected:'مرفوض',Reviewed:'تمت مراجعتها',Pending:'قيد المراجعة'};
+  const MATCH_AR={Strong:'قوي',Probable:'مرجح',Weak:'ضعيف',Unlikely:'غير مرجح'};
+  const FIELD_AR={phone:'الهاتف',email:'البريد الإلكتروني',username:'اسم المستخدم',name:'الاسم',company:'الشركة',city:'المدينة',country:'الدولة'};
+  const levelAr=v=>LEVEL_AR[v]||'غير محدد',statusAr=v=>STATUS_AR[v]||'غير محدد',matchAr=v=>MATCH_AR[v]||'غير محدد',fieldAr=v=>FIELD_AR[v]||'البيانات';
+  const candidateLabel=(x,i=0)=>x?.name||x?.username||x?.email||x?.phone||x?.company||x?.city||`نتيجة محتملة رقم ${i+1}`;
+  const candidateById=(id,list)=>{const i=list.findIndex(x=>x.id===id);return i<0?'نتيجة محتملة':candidateLabel(list[i],i)};
+  const subjectLabel=(x,i=0)=>x?.name||x?.alias||x?.email||x?.username||x?.phone||x?.company||x?.city||`بحث بلا اسم`;
+  const formatDate=value=>{const d=new Date(value);return Number.isNaN(d.getTime())?'غير محدد':new Intl.DateTimeFormat('ar-EG',{dateStyle:'medium',timeStyle:'short'}).format(d)};
+  function uiError(error){
+    const m=String(error?.message||error||'').trim();
+    if(!m)return 'تعذّر إتمام العملية؛ راجع البيانات وحاول مجددًا.';
+    const rules=[
+      [/^Case needs a name, phone, email, or username\.$/i,'أدخل الاسم أو الهاتف أو البريد الإلكتروني أو اسم المستخدم.'],
+      [/^Candidate needs at least one identifier:.*/i,'أدخل اسمًا أو هاتفًا أو بريدًا إلكترونيًا أو اسم مستخدم للنتيجة المحتملة.'],
+      [/^Candidate .* must be a string when provided\.$/i,'بيانات النتيجة المحتملة غير صالحة.'],
+      [/^Candidate timestamp must be a valid date\.$/i,'تاريخ النتيجة المحتملة غير صالح.'],
+      [/^Evidence URL must be a non-empty HTTP\(S\) URL\.$/i,'أدخل رابطًا أصليًا صالحًا.'],
+      [/^Evidence URL must be a valid HTTP\(S\) URL\.$/i,'صيغة الرابط الأصلي غير صالحة.'],
+      [/^Evidence URL must use HTTP or HTTPS\.$/i,'بروتوكول الرابط الأصلي غير مدعوم.'],
+      [/^Evidence source must be a non-empty string\.$/i,'أدخل اسم المصدر.'],
+      [/^Evidence notes must be a string\.$/i,'ملاحظات الدليل غير صالحة.'],
+      [/^Candidate not found:.*/i,'لم يتم العثور على النتيجة المحتملة المحددة.'],
+      [/^Evidence not found:.*/i,'لم يتم العثور على الدليل المحدد.'],
+      [/^Candidate id already exists:.*/i,'معرّف النتيجة المحتملة مستخدم بالفعل.'],
+      [/Web Crypto|Failed to fetch|NetworkError|Load failed|fetch failed/i,'تعذّر الاتصال الآمن بمصدر الترخيص.'],
+      [/storage|workspace|backup|localStorage/i,'تعذّر التحقق من بيانات البحث أو النسخة الاحتياطية.']
+    ];
+    for(const [pattern,arabic] of rules)if(pattern.test(m))return arabic;
+    return /[A-Za-z]{2,}/.test(m)?'تعذّر إتمام العملية؛ راجع البيانات وحاول مجددًا.':m;
+  }
+  function reasonAr(message){
+    const m=String(message||'');let x;
+    if((x=m.match(/^Both values are present, but (\w+) could not be normalized for a reliable comparison\.$/)))return `توجد القيمتان، لكن تعذّر توحيد ${fieldAr(x[1])} لمقارنة موثوقة.`;
+    if((x=m.match(/^Exact normalized (\w+) match \(\+(\d+)\)\.$/)))return `تطابق ${fieldAr(x[1])} بعد التوحيد (+${x[2]}).`;
+    if((x=m.match(/^The supplied (\w+) values conflict \((-\d+)\)\.$/)))return `يوجد تعارض بين قيم ${fieldAr(x[1])} (${x[2]}).`;
+    if(m==='Phone comparison requires a valid number and supported country on both records.')return 'تتطلب مقارنة الهاتف رقمًا صالحًا ودولة مدعومة في السجلين.';
+    if((x=m.match(/^The normalized phone numbers differ \((-\d+)\)\.$/)))return `رقما الهاتف مختلفان بعد التوحيد (${x[1]}).`;
+    if(m==='There are no comparable supplied values; identity cannot be established.')return 'لا توجد قيم مشتركة للمقارنة؛ لا يمكن إثبات الهوية.';
+    if((x=m.match(/^The raw score was below zero; a floor adjustment of \+(\d+) keeps the final score within range\.$/)))return `كانت الدرجة الأولية أقل من صفر؛ أضيف ${x[1]} لضبطها ضمن النطاق.`;
+    if((x=m.match(/^The raw score exceeded 100; a ceiling adjustment of (-?\d+) keeps the final score within range\.$/)))return `تجاوزت الدرجة الأولية 100؛ طُبّق تعديل ${x[1]} لضبطها ضمن النطاق.`;
+    return 'تفاصيل سبب المطابقة غير متاحة.';
+  }
+  const titles={dashboard:['لوحة الملخص','نظرة سريعة على عمليات البحث والاستعلامات والأدلة.'],case:['بيانات البحث','بيانات الشخص محل البحث وخيارات البحث.'],search:['خطة البحث','إنشاء روابط بحث يدوية ومراجعة حالتها.'],candidates:['النتائج المحتملة','النتائج المحتملة ومطابقة الهوية.'],evidence:['الأدلة','سجل الأدلة المرتبط بالنتائج المحتملة.'],coverage:['تغطية البحث','تغطية الاستعلامات والمحركات ومستويات البحث.'],data:['الحفظ والتصدير','التخزين المحلي والنسخ والاستعادة والتنزيل.'],about:['المساعدة والحدود','حدود البحث والترخيص والتخزين.']};
+  function toast(s){const e=$('toast');e.textContent=s;e.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.add('hidden'),2600)}
+  function active(){return st.workspace.cases.find(c=>c.id===st.workspace.activeCaseId)||null}
+  function persist(){if(!st.storage)return false;const c=active();if(c)c.updatedAt=new Date().toISOString();const r=W.saveWorkspace(st.storage,st.workspace);if(!r.success){toast('تعذر الحفظ الدائم؛ البيانات الحالية مؤقتة.');return false}return true}
+  function download(name,text,type='application/json;charset=utf-8'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1200)}
+  function go(tab){st.tab=tab;document.querySelectorAll('.tab-content').forEach(x=>x.hidden=x.id!==`tab-${tab}`);document.querySelectorAll('.nav [data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));document.querySelector(`.nav [data-tab="${tab}"]`)?.scrollIntoView({block:'nearest',inline:'nearest'});$('activeTitle').textContent=titles[tab][0];$('activeSubtitle').textContent=titles[tab][1];render()}
+  async function login(){
+    const b=$('loginBtn');b.disabled=true;$('loginError').textContent='جارٍ الاتصال بمصدر الترخيص…';$('loginError').style.color='var(--green)';
+    try{
+      const r=await fetch(LICENSES_URL,{cache:'no-store',mode:'cors',credentials:'omit',headers:{Accept:'application/json'}});
+      if(!r.ok)throw new Error(`تعذّر الوصول إلى مصدر الترخيص (رمز الاستجابة ${r.status}).`);
+      const doc=await r.json(),result=await verifyLicenseLogin(doc,{userId:$('loginUserId').value,username:$('loginUsername').value,password:$('loginPassword').value},{crypto:crypto});
+      if(!result.ok)throw new Error(({LICENSE_DISABLED:'هذا الترخيص موقوف. تواصل مع المسؤول.',INVALID_CREDENTIALS:'بيانات الدخول غير صحيحة.',LICENSE_DATA_INVALID:'ملف الترخيص غير صالح.'})[result.code]||'تعذّر التحقق من الترخيص.');
+      st.user=result;$('loginPassword').value='';$('userBadge').textContent=`${result.userId} · ${result.username}`;$('userBadge').classList.remove('hidden');$('logoutBtn').classList.remove('hidden');$('loginView').classList.add('hidden');$('appView').classList.remove('hidden');
+      try{st.storage=localStorage;st.workspace=W.loadWorkspace(st.storage)}catch(e){st.storage=null;st.workspace=W.emptyWorkspace();toast(e.code==='CORRUPT_WORKSPACE'?'بيانات البحث المخزنة تالفة ولم يتم استبدالها.':'التخزين المحلي غير متاح؛ هذه الجلسة مؤقتة.')}
+      render();go('dashboard');
+    }catch(e){$('loginError').textContent=uiError(e);$('loginError').style.color='var(--red)';$('loginPassword').value=''}finally{b.disabled=false}
+  }
+  function logout(){$('appView').classList.add('hidden');$('loginView').classList.remove('hidden');$('userBadge').classList.add('hidden');$('logoutBtn').classList.add('hidden');st.user=null}
+  function createCase(){
+    const s={name:$('subjectName').value.trim(),alias:$('subjectAlias').value.trim(),phone:$('subjectPhone').value.trim(),country:$('subjectCountry').value,email:$('subjectEmail').value.trim(),username:$('subjectUsername').value.trim(),company:$('subjectCompany').value.trim(),city:$('subjectCity').value.trim()};
+    Object.keys(s).forEach(k=>{if(!s[k])delete s[k]});
+    try{const c=W.createCaseRecord(s);st.workspace.cases.unshift(c);st.workspace.activeCaseId=c.id;persist();render();go('case');toast('تم إنشاء البحث الجديد.')}catch(e){toast(uiError(e));go('case')}
+  }
+  function fill(){const c=active();if(!c)return;const s=c.subject||{};[['subjectName','name'],['subjectAlias','alias'],['subjectPhone','phone'],['subjectEmail','email'],['subjectUsername','username'],['subjectCompany','company'],['subjectCity','city'],['caseNotes','notes']].forEach(([id,key])=>$(id).value=c[key]||s[key]||'');$('subjectCountry').value=s.country||'EG';$('levelExpanded').checked=c.selectedLevels?.includes('Expanded')||false;$('levelDeep').checked=c.selectedLevels?.includes('Deep')||false;document.querySelectorAll('input[name="engine"]').forEach(i=>i.checked=(c.selectedEngines||SEARCH_ENGINES).includes(i.value))}
+  function updateSubject(){
+    const c=active();if(!c){toast('لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.');return}
+    const s={name:$('subjectName').value.trim(),alias:$('subjectAlias').value.trim(),phone:$('subjectPhone').value.trim(),country:$('subjectCountry').value,email:$('subjectEmail').value.trim(),username:$('subjectUsername').value.trim(),company:$('subjectCompany').value.trim(),city:$('subjectCity').value.trim()};
+    Object.keys(s).forEach(k=>{if(!s[k])delete s[k]});
+    if(!['name','phone','email','username'].some(k=>s[k])){toast('أدخل اسمًا أو هاتفًا أو بريدًا إلكترونيًا أو اسم مستخدم.');return}
+    const changed=JSON.stringify(c.subject)!==JSON.stringify(s);c.subject=s;c.notes=$('caseNotes').value;c.searchStale=changed&&c.queries.length>0;persist();render();toast(c.searchStale?'تم تحديث البيانات؛ أعد إنشاء خطة البحث.':'تم تحديث بيانات البحث.')
+  }
+  function saveOptions(){const c=active();if(!c){toast('لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.');return}const engines=[...document.querySelectorAll('input[name="engine"]:checked')].map(x=>x.value);if(!engines.length){toast('اختر محرك بحث واحدًا على الأقل.');return}c.selectedLevels=['Primary',...($('levelExpanded').checked?['Expanded']:[]),...($('levelDeep').checked?['Deep']:[])];c.selectedEngines=engines;c.searchStale=c.queries.length>0;persist();render();toast('تم حفظ خيارات البحث.')}
+  function makeSearches(){const c=active();if(!c){toast('لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.');return}const levels=['Primary',...($('levelExpanded').checked?['Expanded']:[]),...($('levelDeep').checked?['Deep']:[])],engines=[...document.querySelectorAll('input[name="engine"]:checked')].map(x=>x.value);if(!engines.length){toast('اختر محرك بحث واحدًا على الأقل.');return}try{const plan=buildQueryPlan(c.subject,{requestedLevels:levels,country:c.subject.country}),old=new Map(c.queries.map(q=>[q.url,q]));c.queries=buildEngineSearches(plan,engines).map(q=>({...q,id:old.get(q.url)?.id||`q-${crypto.randomUUID()}`,reviewStatus:old.get(q.url)?.reviewStatus||'Pending',notes:old.get(q.url)?.notes||''}));c.selectedLevels=levels;c.selectedEngines=engines;c.searchPlanWarnings=plan.warnings;c.searchStale=false;persist();render();toast(`تم إنشاء ${c.queries.length} استعلامًا.`)}catch(e){toast(uiError(e))}}
+  function renderQueries(){
+    const box=$('queryList'),c=active();if(!c){box.innerHTML='<div class="empty">لا يوجد بحث حالي. ابدأ بحثًا جديدًا.</div>';return}
+    const qs=c.queries||[],reviewed=qs.filter(q=>q.reviewStatus==='Reviewed').length,pending=qs.length-reviewed;
+    $('searchCount').textContent=`${qs.length} استعلام · ${reviewed} تمت مراجعتها · ${pending} قيد المراجعة`;$('searchStale').classList.toggle('hidden',!c.searchStale);
+    if(!qs.length){box.innerHTML='<div class="empty">أنشئ الاستعلامات من بيانات البحث الحالية.</div>';return}
+    box.innerHTML=qs.map((q,i)=>`<article class="query-card"><div class="query-top"><div><span class="tag">${esc(q.searchEngine)} · ${levelAr(q.level)}</span><div class="query-text" dir="auto">${esc(q.queryText)}</div><div class="url">${esc(q.url)}</div></div><span class="tag ${q.reviewStatus==='Reviewed'?'good':'warn'}">${statusAr(q.reviewStatus)}</span></div><div class="query-actions"><a href="${esc(q.url)}" target="_blank" rel="noopener noreferrer">فتح البحث</a><button data-review="${i}">${q.reviewStatus==='Reviewed'?'إلغاء المراجعة':'تسجيل كمُراجع'}</button><button data-copy="${i}">نسخ</button></div><textarea data-note="${i}" placeholder="ملاحظة للمراجعة">${esc(q.notes||'')}</textarea></article>`).join('')
+  }
+  function match(c){return matchCandidate(active()?.subject||{},c)}
+  function dupes(){return findPossibleCandidateDuplicates(active()?.candidates||[])}
+  function renderCandidates(){
+    const box=$('candidateList'),c=active();if(!c){box.innerHTML='<div class="empty">لا يوجد بحث حالي. ابدأ بحثًا جديدًا.</div>';return}
+    const list=c.candidates||[],pairs=dupes();$('candidateCount').textContent=`${list.length} نتيجة محتملة · ${pairs.length} تكرار محتمل`;$('metricCandidates').textContent=list.length;
+    if(!list.length){box.innerHTML='<div class="empty">لا توجد نتائج محتملة في البحث الحالي.</div>';return}
+    box.innerHTML=list.map((x,index)=>{const m=match(x),dp=pairs.filter(p=>p.candidateId===x.id||p.otherCandidateId===x.id);return `<article class="candidate-card"><div class="candidate-top"><div><strong>${esc(candidateLabel(x,index))}</strong><div class="small">${esc([x.phone,x.email,x.username,x.company,x.city].filter(Boolean).join(' · '))}</div><div class="status-row"><span class="tag ${m.matchLevel==='Strong'?'good':m.matchLevel==='Unlikely'?'bad':'warn'}">${matchAr(m.matchLevel)} · ${m.score}/100</span><span class="tag">${(x.evidence||[]).length} دليل</span>${x.status==='Rejected'?'<span class="tag bad">مرفوض</span>':''}${dp.length?'<span class="tag warn">تكرار محتمل — لا دمج تلقائي</span>':''}</div></div><div class="card-actions"><button data-reject="${esc(x.id)}">رفض دون حذف</button><button data-add-evidence="${esc(x.id)}">إضافة دليل</button></div></div><details><summary class="small">أسباب المطابقة</summary><ul class="small">${m.reasons.map(r=>`<li>${esc(reasonAr(r.message))}</li>`).join('')}</ul>${dp.map(p=>`<p class="small">تكرار محتمل مع ${esc(candidateById(p.otherCandidateId===x.id?p.candidateId:p.otherCandidateId,list))} (${esc(p.matchedIdentifiers.map(fieldAr).join('، '))})</p>`).join('')}</details></article>`}).join('')
+  }
+  function renderEvidence(){
+    const c=active(),box=$('evidenceList'),select=$('evidenceCandidate');if(!c){select.innerHTML='<option value="">لا يوجد بحث حالي</option>';box.innerHTML='<div class="empty">لا يوجد بحث حالي. ابدأ بحثًا جديدًا.</div>';return}
+    const cs=c.candidates||[];select.innerHTML=cs.length?cs.map((x,i)=>`<option value="${esc(x.id)}">${esc(candidateLabel(x,i))}</option>`).join(''):'<option value="">أضف نتيجة محتملة أولًا</option>';
+    const rows=cs.flatMap(x=>(x.evidence||[]).map(e=>({x,e})));$('metricEvidence').textContent=rows.length;if(!rows.length){box.innerHTML='<div class="empty">لا توجد أدلة في البحث الحالي.</div>';return}
+    const statuses=['Needs Review','Probable','Confirmed','Rejected'];
+    box.innerHTML=rows.map(({x,e})=>`<article class="evidence-card"><div class="evidence-top"><div><strong>${esc(e.source)}</strong><div class="small">${esc(candidateLabel(x,cs.indexOf(x)))} · ${esc(formatDate(e.dateAdded))} · ${esc((e.foundVia||[]).join('، '))}</div><a class="url" href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">${esc(e.url)}</a><p class="small">${esc(e.notes||'—')}</p><span class="tag ${e.status==='Confirmed'?'good':e.status==='Rejected'?'bad':'warn'}">${statusAr(e.status)}</span></div><select data-status="${esc(x.id)}|${esc(e.id)}">${statuses.map(s=>`<option value="${s}" ${e.status===s?'selected':''}>${statusAr(s)}</option>`).join('')}</select></div></article>`).join('')
+  }
+  function renderCoverage(){
+    const c=active();if(!c){$('coverageMetrics').innerHTML='<div class="empty">لا يوجد بحث حالي.</div>';return}
+    const d=computeSearchCoverage({queries:c.queries||[],candidates:c.candidates||[],subject:c.subject}),items=[['الاستعلامات المنشأة',d.queriesGenerated],['تمت مراجعتها',d.reviewed],['قيد المراجعة',d.pending],['النتائج المحتملة',d.candidatesFound],['المرفوضة',d.rejected],['عدد الأدلة',d.evidenceCount],['الأدلة المرفوضة',d.rejectedEvidenceCount]];
+    $('coverageMetrics').innerHTML=items.map(([k,v])=>`<div class="metric"><span>${k}</span><strong>${v}</strong></div>`).join('');$('coverageLevels').innerHTML=['Primary','Expanded','Deep'].map(k=>`<tr><td>${levelAr(k)}</td><td>${d.levels[k].generated}</td><td>${d.levels[k].reviewed}</td><td>${d.levels[k].pending}</td></tr>`).join('');$('coverageEngines').innerHTML=Object.entries(d.queriesPerEngine).map(([k,v])=>`<span class="tag">${esc(k)} · ${v}</span>`).join('')||'<span class="small">لا توجد استعلامات</span>';$('coverageMatches').innerHTML=Object.entries(d.identityConfidence).map(([k,v])=>`<span class="tag">${matchAr(k)} · ${v}</span>`).join('')
+  }
+  function renderCases(){const box=$('caseList'),cs=st.workspace.cases;$('metricCases').textContent=cs.length;if(!cs.length){box.innerHTML='<div class="empty">لا توجد عمليات بحث محفوظة. ابدأ ببحث جديد.</div>';return}box.innerHTML=cs.map(c=>`<div class="case-item"><div><strong>${esc(subjectLabel(c.subject))}</strong><div class="small">${esc(formatDate(c.updatedAt))} · ${(c.queries||[]).length} استعلام · ${(c.candidates||[]).length} نتائج محتملة</div></div><button data-open="${esc(c.id)}">${c.id===st.workspace.activeCaseId?'البحث الحالي':'فتح'}</button></div>`).join('')}
+  function render(){const c=active();if(c){fill();$('caseStatus').textContent=c.searchStale?'خطة البحث قديمة':'قيد العمل';$('caseStatus').className=`tag ${c.searchStale?'warn':'good'}`;$('metricQueries').textContent=(c.queries||[]).length}else{$('caseStatus').textContent='لا يوجد بحث حالي';$('metricQueries').textContent='0';$('metricCandidates').textContent='0';$('metricEvidence').textContent='0'}renderCases();renderQueries();renderCandidates();renderEvidence();renderCoverage()}
+  function addCandidate(){const c=active();if(!c){toast('لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.');return}const x={name:$('candidateName').value.trim(),phone:$('candidatePhone').value.trim(),email:$('candidateEmail').value.trim(),username:$('candidateUsername').value.trim(),company:$('candidateCompany').value.trim(),city:$('candidateCity').value.trim(),country:$('candidateCountry').value};Object.keys(x).forEach(k=>{if(!x[k])delete x[k]});try{let n=addCandidateToCase(c,x);const candidate=n.candidates.at(-1);if($('candidateFoundVia').value)n=recordCandidateDiscovery(n,candidate.id,$('candidateFoundVia').value);st.workspace.cases=st.workspace.cases.map(v=>v.id===c.id?n:v);persist();['candidateName','candidatePhone','candidateEmail','candidateUsername','candidateCompany','candidateCity'].forEach(id=>$(id).value='');$('candidateError').textContent='';render();toast('أُضيفت نتيجة محتملة وحُسبت درجة المطابقة.')}catch(e){$('candidateError').textContent=uiError(e)}}
+  function addEvidence(){const c=active();try{const id=$('evidenceCandidate').value;if(!id)throw Error('أضف نتيجة محتملة أولًا.');const input={source:$('evidenceSource').value.trim(),url:$('evidenceUrl').value.trim(),status:$('evidenceStatus').value,notes:$('evidenceNotes').value,searchEngine:$('evidenceEngine').value||undefined};const result=addEvidenceToCandidate(c,id,input);st.workspace.cases=st.workspace.cases.map(v=>v.id===c.id?result.caseRecord:v);persist();$('evidenceError').textContent='';toast(result.duplicate?'الرابط مكرر؛ سُجّل مصدر الاكتشاف فقط.':'تم حفظ الدليل.');$('evidenceSource').value='';$('evidenceUrl').value='';$('evidenceNotes').value='';render()}catch(e){$('evidenceError').textContent=uiError(e)}}
+  function exportCase(){const c=active();if(!c){toast('لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.');return}if(c.searchStale){toast('أعد إنشاء الاستعلامات قبل تنزيل البيانات.');return}download(`بيانات-البحث-${new Date().toISOString().slice(0,10)}.json`,JSON.stringify({exportVersion:2,exportedAt:new Date().toISOString(),case:c},null,2));toast('تم تنزيل بيانات البحث كاملة.')}
+  function makeBackup(){const b=W.createWorkspaceBackup(st.workspace);download(`نسخة-احتياطية-${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(b,null,2));toast(`تم تنزيل نسخة احتياطية تشمل ${b.recordCount} عملية بحث.`)}
+  async function restore(){try{const f=$('restoreFile').files[0];if(!f)throw Error('اختر ملف النسخة الاحتياطية أولًا.');const b=JSON.parse(await f.text()),v=W.validateWorkspaceBackup(b);if(!v.valid)throw Error(v.errors.join(' '));const overwrite=st.workspace.cases.length>0&&confirm(`سيتم استبدال ${st.workspace.cases.length} عملية بحث بالنسخة (${b.recordCount}). هل توافق؟`);if(st.workspace.cases.length&&!overwrite)return;const r=W.restoreWorkspace(st.storage,b,{allowOverwrite:overwrite});if(!r.success)throw Error('تعذّر إتمام الاستعادة.');st.workspace=b.workspace;persist();render();$('dataMessage').textContent=`تمت الاستعادة بنجاح: ${r.recordCount} عملية بحث.`;toast('تمت الاستعادة والتحقق.')}catch(e){$('dataMessage').textContent=uiError(e)}}
+  function bind(){
+    $('loginBtn').addEventListener('click',login);$('loginPassword').addEventListener('keydown',e=>{if(e.key==='Enter')login()});$('logoutBtn').addEventListener('click',logout);$('newCaseBtn').addEventListener('click',createCase);$('saveCaseBtn').addEventListener('click',()=>toast(active()?(persist()?'تم حفظ البحث والتحقق منه.':'تعذّر حفظ البحث.'):'لا يوجد بحث حالي. أنشئ بحثًا جديدًا أولًا.'));$('applySubjectBtn').addEventListener('click',updateSubject);$('applySearchOptionsBtn').addEventListener('click',saveOptions);$('generateSearchBtn').addEventListener('click',makeSearches);$('addCandidateBtn').addEventListener('click',addCandidate);$('addEvidenceBtn').addEventListener('click',addEvidence);$('exportCaseBtn').addEventListener('click',exportCase);$('backupBtn').addEventListener('click',makeBackup);$('chooseRestoreFileBtn').addEventListener('click',()=>$('restoreFile').click());$('restoreFile').addEventListener('change',()=>{$('restoreFileName').textContent=$('restoreFile').files?.length?'تم اختيار ملف للاستعادة.':'لم يتم اختيار ملف.'});$('restoreBtn').addEventListener('click',restore);$('printBtn').addEventListener('click',()=>active()?.searchStale?toast('أعد إنشاء الاستعلامات قبل الطباعة.'):print());$('printDataBtn').addEventListener('click',()=>print());$('refreshCoverageBtn').addEventListener('click',renderCoverage);$('deleteCaseBtn').addEventListener('click',()=>{const c=active();if(c&&confirm('حذف البحث الحالي؟')){st.workspace.cases=st.workspace.cases.filter(x=>x.id!==c.id);st.workspace.activeCaseId=st.workspace.cases[0]?.id||null;persist();render();toast('تم حذف البحث الحالي.')}});
+    document.querySelectorAll('.nav [data-tab]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+    $('caseList').addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b){st.workspace.activeCaseId=b.dataset.open;persist();render();go('case')}});
+    $('queryList').addEventListener('click',async e=>{const c=active(),b=e.target.closest('[data-review]'),copy=e.target.closest('[data-copy]');if(b){const q=c.queries[+b.dataset.review];c.queries=setSearchReviewStatus(c.queries,q.url,q.reviewStatus==='Reviewed'?'Pending':'Reviewed');persist();render()}if(copy){try{await navigator.clipboard.writeText(c.queries[+copy.dataset.copy].queryText);toast('تم النسخ.')}catch{toast('تعذر النسخ؛ حدّد الاستعلام يدويًا.')}}});
+    $('queryList').addEventListener('input',e=>{const c=active(),i=Number(e.target.dataset.note);if(Number.isInteger(i)&&c?.queries[i]){c.queries[i].notes=e.target.value;persist()}});
+    $('candidateList').addEventListener('click',e=>{const c=active(),r=e.target.closest('[data-reject]'),a=e.target.closest('[data-add-evidence]');if(r){const n=rejectCandidate(c,r.dataset.reject,{reason:'رفض يدوي'}).caseRecord;st.workspace.cases=st.workspace.cases.map(x=>x.id===c.id?n:x);persist();render()}if(a){$('evidenceCandidate').value=a.dataset.addEvidence;go('evidence');$('evidenceSource').focus()}});
+    $('evidenceList').addEventListener('change',e=>{const v=e.target.dataset.status;if(!v)return;const c=active(),[cid,eid]=v.split('|'),n=setEvidenceStatus(c,cid,eid,e.target.value).caseRecord;st.workspace.cases=st.workspace.cases.map(x=>x.id===c.id?n:x);persist();render()});
+  }
+  bind();
+})();
+
 </script>
 </body></html>
